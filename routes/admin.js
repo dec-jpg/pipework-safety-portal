@@ -85,14 +85,15 @@ r.get('/dashboard', view, async (req, res) => {
 });
 
 // ---------- operatives ----------
-const OP_FIELDS = ['full_name', 'phone', 'email', 'role', 'employment', 'start_date', 'emergency_name', 'emergency_phone', 'notes', 'active'];
+const OP_FIELDS = ['full_name', 'phone', 'email', 'role', 'employment', 'start_date', 'emergency_name', 'emergency_phone', 'notes', 'active', 'cost_rate'];
+const num = v => (v === '' || v == null ? null : Number.isFinite(Number(v)) ? Number(v) : null);
 function opValues(b) {
   return [clean(b.full_name, 120), normPhone(b.phone) || null, clean(b.email, 160), clean(b.role, 80), clean(b.employment, 40), date(b.start_date),
-    clean(b.emergency_name, 120), normPhone(b.emergency_phone) || null, clean(b.notes, 2000), b.active === undefined ? true : bool(b.active)];
+    clean(b.emergency_name, 120), normPhone(b.emergency_phone) || null, clean(b.notes, 2000), b.active === undefined ? true : bool(b.active), num(b.cost_rate)];
 }
 
 r.get('/operatives', view, async (req, res) => {
-  const rows = (await q(`SELECT o.id, o.full_name, o.phone, o.role, o.employment, o.active,
+  const rows = (await q(`SELECT o.id, o.full_name, o.phone, o.role, o.employment, o.active, o.cost_rate,
       (SELECT COUNT(*)::int FROM (${LATEST_QUALS}) l WHERE l.operative_id = o.id AND l.status = 'expired') AS expired,
       (SELECT COUNT(*)::int FROM (${LATEST_QUALS}) l WHERE l.operative_id = o.id AND l.status = 'expiring') AS expiring,
       (SELECT COUNT(*)::int FROM qual_types t WHERE t.active AND t.required AND NOT EXISTS (SELECT 1 FROM quals ql WHERE ql.operative_id = o.id AND ql.qual_type_id = t.id)) AS missing,
@@ -213,10 +214,11 @@ r.put('/qual-types/:id', owner, async (req, res) => {
 });
 
 // ---------- jobs ----------
-const JOB_FIELDS = ['ref', 'name', 'address', 'client', 'client_contact', 'start_on', 'end_on', 'status', 'notes'];
+const JOB_FIELDS = ['ref', 'name', 'address', 'client', 'client_contact', 'start_on', 'end_on', 'status', 'notes', 'job_type', 'order_value', 'budget_hours', 'budget_materials', 'budget_other', 'retention_pct'];
 function jobValues(b) {
   return [clean(b.ref, 40), clean(b.name, 160), clean(b.address, 300), clean(b.client, 160), clean(b.client_contact, 200),
-    date(b.start_on), date(b.end_on), b.status === 'complete' ? 'complete' : 'live', clean(b.notes, 4000)];
+    date(b.start_on), date(b.end_on), b.status === 'complete' ? 'complete' : 'live', clean(b.notes, 4000),
+    ['measured', 'fixed', 'daywork'].includes(b.job_type) ? b.job_type : 'measured', num(b.order_value), num(b.budget_hours), num(b.budget_materials), num(b.budget_other), num(b.retention_pct)];
 }
 
 r.get('/jobs', view, async (req, res) => {

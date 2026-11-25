@@ -7,7 +7,7 @@
     "op": "operative",
     "ops": "operatives"
   },
-  "about": "a pipework installation contractor working on construction sites across the North West of England",
+  "about": "a utilities contractor laying and maintaining water and gas mains and services across the North West of England",
   "quiz": false,
   "diary": {
     "reminder_hour": 16
@@ -19,23 +19,37 @@
       "months": 60
     },
     {
-      "name": "Face fit test (RPE)",
-      "months": 24
-    },
-    {
-      "name": "Manual Handling",
+      "name": "EUSR National Water Hygiene",
+      "required": true,
       "months": 36
     },
     {
-      "name": "Working at Height",
-      "months": 36
-    },
-    {
-      "name": "PASMA",
+      "name": "NRSWA Streetworks Operative",
+      "required": true,
       "months": 60
     },
     {
-      "name": "IPAF",
+      "name": "NRSWA Streetworks Supervisor",
+      "months": 60
+    },
+    {
+      "name": "Cable Avoidance (CAT and Genny)",
+      "months": 36
+    },
+    {
+      "name": "NPORS/CPCS 360 Excavator",
+      "months": 60
+    },
+    {
+      "name": "NPORS/CPCS Dumper",
+      "months": 60
+    },
+    {
+      "name": "Confined Space Awareness",
+      "months": 36
+    },
+    {
+      "name": "Gas Network Competency",
       "months": 60
     },
     {
@@ -43,26 +57,20 @@
       "months": 36
     },
     {
-      "name": "Hot Works Awareness",
+      "name": "Manual Handling",
       "months": 36
     },
     {
-      "name": "Asbestos Awareness",
-      "months": 12
-    },
-    {
-      "name": "COSHH Awareness",
+      "name": "Emergency First Aid at Work",
       "months": 36
     },
     {
-      "name": "Confined Space Awareness",
+      "name": "First Aid at Work",
       "months": 36
     },
     {
-      "name": "NVQ Level 2 Pipefitting"
-    },
-    {
-      "name": "NVQ Level 3 Pipefitting"
+      "name": "Face fit test (RPE)",
+      "months": 24
     },
     {
       "name": "SSSTS",
@@ -71,14 +79,6 @@
     {
       "name": "SMSTS",
       "months": 60
-    },
-    {
-      "name": "First Aid at Work",
-      "months": 36
-    },
-    {
-      "name": "Emergency First Aid at Work",
-      "months": 36
     }
   ],
   "talks": [
@@ -90,19 +90,19 @@
       "sections": [
         {
           "heading": "Why it matters",
-          "body": "Car parks are planned to keep vehicles away from pedestrians, plant and work areas.\n• Badly parked vehicles cause collisions and near misses with people and machinery.\n• A van in the wrong place can block an ambulance or fire engine.\n• Blocked routes hold up deliveries, plant and materials, which leads to rushing and risk-taking."
+          "body": "Car parks are planned to keep vehicles away from pedestrians, plant and work areas.\n\u2022 Badly parked vehicles cause collisions and near misses with people and machinery.\n\u2022 A van in the wrong place can block an ambulance or fire engine.\n\u2022 Blocked routes hold up deliveries, plant and materials, which leads to rushing and risk-taking."
         },
         {
           "heading": "Know where to park",
-          "body": "• Parking areas are covered in your site induction. If you missed it, ask.\n• Look for signs and the site map showing where you can and cannot park.\n• Park inside the marked bays or boundaries, not on verges, walkways or in work zones.\n• Never park across entrances, exits, gates or access routes.\nThink about: where is the nearest emergency access route to where you parked today?"
+          "body": "\u2022 Parking areas are covered in your site induction. If you missed it, ask.\n\u2022 Look for signs and the site map showing where you can and cannot park.\n\u2022 Park inside the marked bays or boundaries, not on verges, walkways or in work zones.\n\u2022 Never park across entrances, exits, gates or access routes.\nThink about: where is the nearest emergency access route to where you parked today?"
         },
         {
           "heading": "Be considerate",
-          "body": "• Think about others when you park: will your vehicle block a delivery, a pedestrian route or a work area?\n• Do not park somewhere your vehicle could be hit or get in the way of plant.\n• If the car park is full, ask your supervisor where to go. Do not just squeeze in anywhere.\n• Drive slowly on site and follow the one-way system and speed limits."
+          "body": "\u2022 Think about others when you park: will your vehicle block a delivery, a pedestrian route or a work area?\n\u2022 Do not park somewhere your vehicle could be hit or get in the way of plant.\n\u2022 If the car park is full, ask your supervisor where to go. Do not just squeeze in anywhere.\n\u2022 Drive slowly on site and follow the one-way system and speed limits."
         },
         {
           "heading": "Report problems",
-          "body": "If there is a problem with parking, tell your supervisor or the site manager. For example:\n• The car park is overcrowded.\n• Markings or signs are faded or unclear.\n• Vehicles are blocking routes or emergency access."
+          "body": "If there is a problem with parking, tell your supervisor or the site manager. For example:\n\u2022 The car park is overcrowded.\n\u2022 Markings or signs are faded or unclear.\n\u2022 Vehicles are blocking routes or emergency access."
         },
         {
           "heading": "The law in brief",
@@ -110,7 +110,7 @@
         },
         {
           "heading": "Remember",
-          "body": "• Only park in designated areas.\n• Stay inside the marked bays.\n• Never block entrances, exits or emergency routes.\n• Keep clear of walkways and work zones.\n• Report parking problems to your supervisor."
+          "body": "\u2022 Only park in designated areas.\n\u2022 Stay inside the marked bays.\n\u2022 Never block entrances, exits or emergency routes.\n\u2022 Keep clear of walkways and work zones.\n\u2022 Report parking problems to your supervisor."
         }
       ],
       "questions": []
@@ -127,23 +127,23 @@
         },
         {
           "heading": "The site minimum",
-          "body": "On every construction site, as a minimum, you wear:\n• Safety helmet\n• High visibility clothing\n• Safety footwear\nThis applies from the moment you step on site until you leave, including breaks outside the welfare area. Some sites also require gloves and eye protection at all times, so check the site rules at induction."
+          "body": "On every construction site, as a minimum, you wear:\n\u2022 Safety helmet\n\u2022 High visibility clothing\n\u2022 Safety footwear\nThis applies from the moment you step on site until you leave, including breaks outside the welfare area. Some sites also require gloves and eye protection at all times, so check the site rules at induction."
         },
         {
           "heading": "PPE for the task",
-          "body": "On top of the minimum, each job needs the right PPE to protect your hearing, skin, eyes and lungs. Check the RAMS for the task. Examples:\n• Eye protection when cutting, grinding, threading or drilling overhead\n• Hearing protection when operating mixers, saws or breakers\n• Gloves when handling sharp materials or chemicals\n• RPE (a dust mask or respirator) when cutting, drilling or sanding dusty materials\nThink about: what PPE does the job you are doing today need?"
+          "body": "On top of the minimum, each job needs the right PPE to protect your hearing, skin, eyes and lungs. Check the RAMS for the task. Examples:\n\u2022 Eye protection when cutting, grinding, threading or drilling overhead\n\u2022 Hearing protection when operating mixers, saws or breakers\n\u2022 Gloves when handling sharp materials or chemicals\n\u2022 RPE (a dust mask or respirator) when cutting, drilling or sanding dusty materials\nThink about: what PPE does the job you are doing today need?"
         },
         {
           "heading": "Right kit, good condition",
-          "body": "• PPE must be suitable for the job and fit you properly\n• Look for the UKCA or CE mark, which shows it meets the relevant standard\n• Use and store it as the manufacturer's instructions say\n• Check it before use: cracked helmets, split gloves, scratched glasses and worn boots get replaced\n• Report lost or damaged PPE to your supervisor and get a replacement before carrying on\nNever alter PPE, such as drilling holes in a helmet or adding stickers."
+          "body": "\u2022 PPE must be suitable for the job and fit you properly\n\u2022 Look for the UKCA or CE mark, which shows it meets the relevant standard\n\u2022 Use and store it as the manufacturer's instructions say\n\u2022 Check it before use: cracked helmets, split gloves, scratched glasses and worn boots get replaced\n\u2022 Report lost or damaged PPE to your supervisor and get a replacement before carrying on\nNever alter PPE, such as drilling holes in a helmet or adding stickers."
         },
         {
           "heading": "Masks need face fit testing",
-          "body": "A tight-fitting mask only works if it seals to your face. If you wear RPE, you must be face fit tested for the make, model and size you use.\n• Be clean shaven where the mask seals. Stubble breaks the seal\n• Do a quick fit check every time you put it on\n• Disposable masks are single use; change them when damaged, dirty or hard to breathe through\nIf you have not been face fit tested, tell your supervisor before doing dusty work."
+          "body": "A tight-fitting mask only works if it seals to your face. If you wear RPE, you must be face fit tested for the make, model and size you use.\n\u2022 Be clean shaven where the mask seals. Stubble breaks the seal\n\u2022 Do a quick fit check every time you put it on\n\u2022 Disposable masks are single use; change them when damaged, dirty or hard to breathe through\nIf you have not been face fit tested, tell your supervisor before doing dusty work."
         },
         {
           "heading": "Remember",
-          "body": "• Helmet, hi-vis and safety boots are the minimum on every site\n• Add the PPE the task needs: eyes, ears, hands, lungs\n• PPE must be UKCA or CE marked, fit you and be in good condition\n• Look after it and follow the manufacturer's instructions\n• Face fit testing is required for any tight-fitting mask\n• Damaged or missing PPE: stop and report it"
+          "body": "\u2022 Helmet, hi-vis and safety boots are the minimum on every site\n\u2022 Add the PPE the task needs: eyes, ears, hands, lungs\n\u2022 PPE must be UKCA or CE marked, fit you and be in good condition\n\u2022 Look after it and follow the manufacturer's instructions\n\u2022 Face fit testing is required for any tight-fitting mask\n\u2022 Damaged or missing PPE: stop and report it"
         }
       ],
       "questions": []
@@ -156,23 +156,23 @@
       "sections": [
         {
           "heading": "Why it matters",
-          "body": "• Trips and slips: tools, offcuts, cables and spills on the floor put people on the deck.\n• Blocked routes: materials left lying around block access and emergency escape routes.\n• Fire: piles of rubbish and packaging give a fire something to feed on.\n• Efficiency: you work faster when you can find your gear and move freely.\nThink about: what could go wrong if waste is left lying around your area today?"
+          "body": "\u2022 Trips and slips: tools, offcuts, cables and spills on the floor put people on the deck.\n\u2022 Blocked routes: materials left lying around block access and emergency escape routes.\n\u2022 Fire: piles of rubbish and packaging give a fire something to feed on.\n\u2022 Efficiency: you work faster when you can find your gear and move freely.\nThink about: what could go wrong if waste is left lying around your area today?"
         },
         {
           "heading": "Clear routes and exits",
-          "body": "• Keep walkways clear. Never leave tools, cables or materials where people need to walk.\n• Fire exits and escape routes must never be blocked, not even for five minutes.\n• Control trailing leads. Route them along walls or overhead, or use cable protectors so nobody trips.\n• Clean up spills and debris straight away. If you cannot, cordon it off and tell your supervisor."
+          "body": "\u2022 Keep walkways clear. Never leave tools, cables or materials where people need to walk.\n\u2022 Fire exits and escape routes must never be blocked, not even for five minutes.\n\u2022 Control trailing leads. Route them along walls or overhead, or use cable protectors so nobody trips.\n\u2022 Clean up spills and debris straight away. If you cannot, cordon it off and tell your supervisor."
         },
         {
           "heading": "Materials and waste",
-          "body": "• Stack and store materials so they are stable and secure, and keep them away from edges and openings.\n• Use the skips and bins provided. Do not let rubbish build up around your work area.\n• Keep waste separated if the site has separate skips.\n• Do not throw waste from height. Bring it down safely or use a chute."
+          "body": "\u2022 Stack and store materials so they are stable and secure, and keep them away from edges and openings.\n\u2022 Use the skips and bins provided. Do not let rubbish build up around your work area.\n\u2022 Keep waste separated if the site has separate skips.\n\u2022 Do not throw waste from height. Bring it down safely or use a chute."
         },
         {
           "heading": "Tidy as you go",
-          "body": "Do not leave it all until the end of the day. Clear up after each task, and the end of shift becomes a quick final sweep instead of a big job.\n• Everyone is responsible for keeping their own work area tidy.\n• Clearing waste is part of the daily job, not something for later.\n• Supervisors will check housekeeping regularly. If an area is not up to standard, sort it before moving on."
+          "body": "Do not leave it all until the end of the day. Clear up after each task, and the end of shift becomes a quick final sweep instead of a big job.\n\u2022 Everyone is responsible for keeping their own work area tidy.\n\u2022 Clearing waste is part of the daily job, not something for later.\n\u2022 Supervisors will check housekeeping regularly. If an area is not up to standard, sort it before moving on."
         },
         {
           "heading": "Remember",
-          "body": "• Walkways, fire exits and escape routes kept clear.\n• Cables routed safely or covered.\n• Materials stacked stable and away from edges.\n• Waste in the skips and bins, not on the floor.\n• Spills cleaned up straight away.\n• Tidy as you go: your area, your responsibility."
+          "body": "\u2022 Walkways, fire exits and escape routes kept clear.\n\u2022 Cables routed safely or covered.\n\u2022 Materials stacked stable and away from edges.\n\u2022 Waste in the skips and bins, not on the floor.\n\u2022 Spills cleaned up straight away.\n\u2022 Tidy as you go: your area, your responsibility."
         }
       ],
       "questions": []
@@ -185,19 +185,19 @@
       "sections": [
         {
           "heading": "Why they happen",
-          "body": "Most slips, trips and falls on site come from poor housekeeping:\n• Cables, hand tools, offcuts of pipe, fittings and packaging left on the floor\n• Spilt oil, grease, sealant or water not cleaned up straight away\n• Brick, block and packer fragments building up as work goes on\n• Trailing leads across walkways\n• Mud left on ladder rungs by the last person to use it"
+          "body": "Most slips, trips and falls on site come from poor housekeeping:\n\u2022 Cables, hand tools, offcuts of pipe, fittings and packaging left on the floor\n\u2022 Spilt oil, grease, sealant or water not cleaned up straight away\n\u2022 Brick, block and packer fragments building up as work goes on\n\u2022 Trailing leads across walkways\n\u2022 Mud left on ladder rungs by the last person to use it"
         },
         {
           "heading": "Watch the light",
-          "body": "Fading light makes everything harder to see. On winter afternoons, tools and materials you could see at lunchtime can be hidden in the gloom.\n• Make sure access routes and work areas are properly lit\n• If lighting is poor or has failed, tell your supervisor\n• Put kit away before the light goes, not after\nThink about: where on this job would a trip hazard be hardest to spot at 4pm in December?"
+          "body": "Fading light makes everything harder to see. On winter afternoons, tools and materials you could see at lunchtime can be hidden in the gloom.\n\u2022 Make sure access routes and work areas are properly lit\n\u2022 If lighting is poor or has failed, tell your supervisor\n\u2022 Put kit away before the light goes, not after\nThink about: where on this job would a trip hazard be hardest to spot at 4pm in December?"
         },
         {
           "heading": "Clear as you go",
-          "body": "• Clear waste as you create it. Bag or bundle light waste and keep pipe offcuts in one place, not underfoot.\n• Never leave tools, pipe lengths, fittings or unused materials lying on the floor or across a route\n• Store kit in a safe place when you are not using it"
+          "body": "\u2022 Clear waste as you create it. Bag or bundle light waste and keep pipe offcuts in one place, not underfoot.\n\u2022 Never leave tools, pipe lengths, fittings or unused materials lying on the floor or across a route\n\u2022 Store kit in a safe place when you are not using it"
         },
         {
           "heading": "Spills and cables",
-          "body": "• If you are using anything that can spill (sealant, foam, oils, cleaning fluids), have something on hand to clean it up\n• Clean up spills straight away, or cordon them off and report them if you cannot\n• Run leads above head height where you can\n• If leads must run at floor level, keep them away from walkways or cover them\n• Use battery tools where possible to cut down on cables"
+          "body": "\u2022 If you are using anything that can spill (sealant, foam, oils, cleaning fluids), have something on hand to clean it up\n\u2022 Clean up spills straight away, or cordon them off and report them if you cannot\n\u2022 Run leads above head height where you can\n\u2022 If leads must run at floor level, keep them away from walkways or cover them\n\u2022 Use battery tools where possible to cut down on cables"
         },
         {
           "heading": "Mud and ladders",
@@ -205,7 +205,7 @@
         },
         {
           "heading": "Remember",
-          "body": "• Most slips and trips come from poor housekeeping\n• Clear waste and offcuts as you go\n• Nothing left lying on floors or walkways\n• Clean up spills straight away\n• Keep leads off walkways\n• Scrape mud off your boots before using ladders\n• Report poor lighting"
+          "body": "\u2022 Most slips and trips come from poor housekeeping\n\u2022 Clear waste and offcuts as you go\n\u2022 Nothing left lying on floors or walkways\n\u2022 Clean up spills straight away\n\u2022 Keep leads off walkways\n\u2022 Scrape mud off your boots before using ladders\n\u2022 Report poor lighting"
         }
       ],
       "questions": []
@@ -218,19 +218,19 @@
       "sections": [
         {
           "heading": "Why walkways matter",
-          "body": "Not using walkways properly, or letting them get cluttered, leads to:\n• Slips, trips and falls on uneven ground, debris or wet surfaces.\n• Being struck by vehicles, plant or other workers.\n• Blocked escape routes that slow down an evacuation.\n• Wandering into hazardous areas such as open excavations."
+          "body": "Not using walkways properly, or letting them get cluttered, leads to:\n\u2022 Slips, trips and falls on uneven ground, debris or wet surfaces.\n\u2022 Being struck by vehicles, plant or other workers.\n\u2022 Blocked escape routes that slow down an evacuation.\n\u2022 Wandering into hazardous areas such as open excavations."
         },
         {
           "heading": "Stick to the route",
-          "body": "• Always use the marked pedestrian routes (signs, barriers or painted lines).\n• Never take shortcuts through restricted or high-risk areas.\n• Follow temporary signs and diversions as the work changes.\n• Do not move or alter barriers without permission from site management.\n• If a walkway is blocked, report it and use another safe route."
+          "body": "\u2022 Always use the marked pedestrian routes (signs, barriers or painted lines).\n\u2022 Never take shortcuts through restricted or high-risk areas.\n\u2022 Follow temporary signs and diversions as the work changes.\n\u2022 Do not move or alter barriers without permission from site management.\n\u2022 If a walkway is blocked, report it and use another safe route."
         },
         {
           "heading": "Keep them clear",
-          "body": "• Keep walkways free of tools, materials and waste.\n• Never leave equipment or materials in a walkway, even for a minute.\n• Report debris, spillages or obstacles to your supervisor or the site manager.\nThink about: is there anything blocking the walkways on this site right now?"
+          "body": "\u2022 Keep walkways free of tools, materials and waste.\n\u2022 Never leave equipment or materials in a walkway, even for a minute.\n\u2022 Report debris, spillages or obstacles to your supervisor or the site manager.\nThink about: is there anything blocking the walkways on this site right now?"
         },
         {
           "heading": "Stay alert to vehicles",
-          "body": "• Know where the vehicle routes are and check for moving plant before crossing.\n• Get a thumbs up or clear signal from the driver or operator before you cross in front of them.\n• Wear your hi-vis and other PPE so drivers can see you.\n• Do not use your phone while walking around site."
+          "body": "\u2022 Know where the vehicle routes are and check for moving plant before crossing.\n\u2022 Get a thumbs up or clear signal from the driver or operator before you cross in front of them.\n\u2022 Wear your hi-vis and other PPE so drivers can see you.\n\u2022 Do not use your phone while walking around site."
         },
         {
           "heading": "Weather and responsibilities",
@@ -238,7 +238,7 @@
         },
         {
           "heading": "Remember",
-          "body": "• Use the marked walkways, no shortcuts.\n• Keep walkways clear, even temporarily.\n• Get a clear signal from drivers before crossing.\n• Wear your hi-vis and stay off your phone.\n• Report blockages, spills and icy patches."
+          "body": "\u2022 Use the marked walkways, no shortcuts.\n\u2022 Keep walkways clear, even temporarily.\n\u2022 Get a clear signal from drivers before crossing.\n\u2022 Wear your hi-vis and stay off your phone.\n\u2022 Report blockages, spills and icy patches."
         }
       ],
       "questions": []
@@ -251,27 +251,27 @@
       "sections": [
         {
           "heading": "What can go wrong",
-          "body": "• Falling loads: from poor slinging, overloading or mechanical failure.\n• Struck by: swinging loads and the boom or jib as the crane slews (rotates).\n• Electrocution: the boom or load touching overhead power lines.\n• Overturning: soft ground, high wind or overloading can tip a crane.\n• Crushing: getting trapped between the crane, its load and other structures."
+          "body": "\u2022 Falling loads: from poor slinging, overloading or mechanical failure.\n\u2022 Struck by: swinging loads and the boom or jib as the crane slews (rotates).\n\u2022 Electrocution: the boom or load touching overhead power lines.\n\u2022 Overturning: soft ground, high wind or overloading can tip a crane.\n\u2022 Crushing: getting trapped between the crane, its load and other structures."
         },
         {
           "heading": "Keep out of the zone",
-          "body": "Every lift should have a barriered exclusion zone around the crane's working area.\n• Only enter if you are authorised and part of the lift team.\n• Never stand or walk under a suspended load. Ever.\n• Keep clear of the boom and the crane's slewing radius while it is working.\n• Watch for swinging loads and stay alert to the crane's movement."
+          "body": "Every lift should have a barriered exclusion zone around the crane's working area.\n\u2022 Only enter if you are authorised and part of the lift team.\n\u2022 Never stand or walk under a suspended load. Ever.\n\u2022 Keep clear of the boom and the crane's slewing radius while it is working.\n\u2022 Watch for swinging loads and stay alert to the crane's movement."
         },
         {
           "heading": "Signals and communication",
-          "body": "• The operator takes signals from one trained signaller (banksman) only.\n• Use standard hand signals or radios so instructions are clear.\n• If you have to move near the crane, make eye contact with the operator first so they know you are there.\n• If you are not part of the lift, do not give signals or direct the load.\nThink about: who is the trained signaller on today's lifts?"
+          "body": "\u2022 The operator takes signals from one trained signaller (banksman) only.\n\u2022 Use standard hand signals or radios so instructions are clear.\n\u2022 If you have to move near the crane, make eye contact with the operator first so they know you are there.\n\u2022 If you are not part of the lift, do not give signals or direct the load.\nThink about: who is the trained signaller on today's lifts?"
         },
         {
           "heading": "Loads and lifting gear",
-          "body": "• Loads must be properly slung and secured before they leave the ground.\n• Only use lifting gear (slings, chains, shackles) that is in date for inspection and in good condition.\n• Check gear before use. If it is damaged or unmarked, do not use it: take it out of use and tell your supervisor.\n• Never ride on a load or hook."
+          "body": "\u2022 Loads must be properly slung and secured before they leave the ground.\n\u2022 Only use lifting gear (slings, chains, shackles) that is in date for inspection and in good condition.\n\u2022 Check gear before use. If it is damaged or unmarked, do not use it: take it out of use and tell your supervisor.\n\u2022 Never ride on a load or hook."
         },
         {
           "heading": "Weather, ground and emergencies",
-          "body": "• Lifting stops in high winds or extreme weather. The operator and lift supervisor make that call: do not pressure them.\n• Soft, wet or disturbed ground can tip a crane. Report any digging, flooding or settlement near the crane.\n• Know the site emergency plan for a crane failure or accident.\n• If you see anything unsafe, stop and report it to your supervisor straight away."
+          "body": "\u2022 Lifting stops in high winds or extreme weather. The operator and lift supervisor make that call: do not pressure them.\n\u2022 Soft, wet or disturbed ground can tip a crane. Report any digging, flooding or settlement near the crane.\n\u2022 Know the site emergency plan for a crane failure or accident.\n\u2022 If you see anything unsafe, stop and report it to your supervisor straight away."
         },
         {
           "heading": "Remember",
-          "body": "• Never stand under a suspended load.\n• Stay out of exclusion zones unless you are part of the lift.\n• One trained signaller gives the signals.\n• Make eye contact with the operator before moving near the crane.\n• Damaged lifting gear comes out of use.\n• Report unsafe conditions immediately."
+          "body": "\u2022 Never stand under a suspended load.\n\u2022 Stay out of exclusion zones unless you are part of the lift.\n\u2022 One trained signaller gives the signals.\n\u2022 Make eye contact with the operator before moving near the crane.\n\u2022 Damaged lifting gear comes out of use.\n\u2022 Report unsafe conditions immediately."
         }
       ],
       "questions": []
@@ -284,19 +284,19 @@
       "sections": [
         {
           "heading": "Is a stepladder right?",
-          "body": "Before you grab a stepladder, ask whether it is the right kit for the job. A stepladder is for short, light work only.\n• Could a podium, mobile tower or scaffold do the job more safely? If so, use it.\n• Check the risk assessment covers the task: ground conditions, weather and working height.\n• If the job is long, heavy or needs both hands for any length of time, a stepladder is the wrong choice. Speak to your supervisor."
+          "body": "Before you grab a stepladder, ask whether it is the right kit for the job. A stepladder is for short, light work only.\n\u2022 Could a podium, mobile tower or scaffold do the job more safely? If so, use it.\n\u2022 Check the risk assessment covers the task: ground conditions, weather and working height.\n\u2022 If the job is long, heavy or needs both hands for any length of time, a stepladder is the wrong choice. Speak to your supervisor."
         },
         {
           "heading": "Check it before use",
-          "body": "Look the stepladder over every time before you use it, not just once a week.\n• Stiles and treads: no cracks, splits or bends.\n• Feet: all present, not worn or damaged.\n• Spreaders or locking bars: work properly and lock fully.\n• Clean and dry: mud, oil or wet treads make it slippery.\nIf anything is wrong, do not use it. Label it as defective, take it out of use and tell your supervisor.\nThink about: how do you know this ladder is fit for purpose today?"
+          "body": "Look the stepladder over every time before you use it, not just once a week.\n\u2022 Stiles and treads: no cracks, splits or bends.\n\u2022 Feet: all present, not worn or damaged.\n\u2022 Spreaders or locking bars: work properly and lock fully.\n\u2022 Clean and dry: mud, oil or wet treads make it slippery.\nIf anything is wrong, do not use it. Label it as defective, take it out of use and tell your supervisor.\nThink about: how do you know this ladder is fit for purpose today?"
         },
         {
           "heading": "Setting it up",
-          "body": "• Stand it on firm, level ground. Never prop the legs on bricks, blocks or anything else to level it.\n• Open it fully and make sure the spreaders are locked before you climb.\n• Face it towards the work so you are not twisting or leaning sideways.\n• Check the maximum load on the label. Count your own weight plus any tools and materials you are taking up."
+          "body": "\u2022 Stand it on firm, level ground. Never prop the legs on bricks, blocks or anything else to level it.\n\u2022 Open it fully and make sure the spreaders are locked before you climb.\n\u2022 Face it towards the work so you are not twisting or leaning sideways.\n\u2022 Check the maximum load on the label. Count your own weight plus any tools and materials you are taking up."
         },
         {
           "heading": "Climbing and working",
-          "body": "• Face the steps when going up and down.\n• Keep three points of contact: two hands and a foot, or two feet and a hand.\n• Do not overreach. Keep your belt buckle inside the stiles. If you cannot reach, get down and move the ladder.\n• Do not carry tools or materials in your hands while climbing. Use a tool belt, or pass or lift items up separately.\n• Do not stand on the top two steps unless the stepladder has a proper platform and handrail."
+          "body": "\u2022 Face the steps when going up and down.\n\u2022 Keep three points of contact: two hands and a foot, or two feet and a hand.\n\u2022 Do not overreach. Keep your belt buckle inside the stiles. If you cannot reach, get down and move the ladder.\n\u2022 Do not carry tools or materials in your hands while climbing. Use a tool belt, or pass or lift items up separately.\n\u2022 Do not stand on the top two steps unless the stepladder has a proper platform and handrail."
         },
         {
           "heading": "Overhead and weather",
@@ -304,7 +304,7 @@
         },
         {
           "heading": "Remember",
-          "body": "• Ask first: is a stepladder the safest option?\n• Check it every time. Damaged ladder means do not use it.\n• Firm, level ground and spreaders fully locked.\n• Three points of contact, no overreaching, no carrying loads up.\n• Stay off the top two steps unless there is a platform and handrail.\n• Never take shortcuts at height."
+          "body": "\u2022 Ask first: is a stepladder the safest option?\n\u2022 Check it every time. Damaged ladder means do not use it.\n\u2022 Firm, level ground and spreaders fully locked.\n\u2022 Three points of contact, no overreaching, no carrying loads up.\n\u2022 Stay off the top two steps unless there is a platform and handrail.\n\u2022 Never take shortcuts at height."
         }
       ],
       "questions": []
@@ -321,19 +321,19 @@
         },
         {
           "heading": "Scaffolds",
-          "body": "• Only use a scaffold that has been handed over and inspected. Check the scaffold tag before you go on it.\n• Inspections are recorded and kept on file\n• Ladders to scaffolds must be secured and in good condition\n• Never alter, remove or tamper with any part of a scaffold, including guardrails, toe boards and ties. Only the scaffolders do that.\nIf a scaffold looks wrong or something is missing, stay off it and tell your supervisor."
+          "body": "\u2022 Only use a scaffold that has been handed over and inspected. Check the scaffold tag before you go on it.\n\u2022 Inspections are recorded and kept on file\n\u2022 Ladders to scaffolds must be secured and in good condition\n\u2022 Never alter, remove or tamper with any part of a scaffold, including guardrails, toe boards and ties. Only the scaffolders do that.\nIf a scaffold looks wrong or something is missing, stay off it and tell your supervisor."
         },
         {
           "heading": "Ladders and hop-ups",
-          "body": "Ladders and hop-ups must be in good condition and right for the job. Check them before every use:\n• Stiles not bent, split or cracked\n• Rungs or treads not loose, missing or damaged\n• Feet in place and not worn\n• Locking bars on steps and hop-ups working\n• Clean, with no mud or grease\nIf it fails a check, take it out of use, label it and report it.\nThink about: is a ladder really the right kit for this job, or would a podium or tower be safer?"
+          "body": "Ladders and hop-ups must be in good condition and right for the job. Check them before every use:\n\u2022 Stiles not bent, split or cracked\n\u2022 Rungs or treads not loose, missing or damaged\n\u2022 Feet in place and not worn\n\u2022 Locking bars on steps and hop-ups working\n\u2022 Clean, with no mud or grease\nIf it fails a check, take it out of use, label it and report it.\nThink about: is a ladder really the right kit for this job, or would a podium or tower be safer?"
         },
         {
           "heading": "Openings, bags and excavations",
-          "body": "• Stairwells must be protected at all times\n• Fall protection at openings and risers must be in place before you work near them, and left in place when you leave\n• Openings on upper floors and in floor slabs for risers must be covered or guarded\n• Deep excavations must be protected so nobody can fall in\nIf you have to remove a barrier or cover to do your job, get permission first and put it back straight away."
+          "body": "\u2022 Stairwells must be protected at all times\n\u2022 Fall protection at openings and risers must be in place before you work near them, and left in place when you leave\n\u2022 Openings on upper floors and in floor slabs for risers must be covered or guarded\n\u2022 Deep excavations must be protected so nobody can fall in\nIf you have to remove a barrier or cover to do your job, get permission first and put it back straight away."
         },
         {
           "heading": "Remember",
-          "body": "• No scaffold tag, no access\n• Never tamper with a scaffold\n• Check ladders and hop-ups before every use\n• Stairwells, openings and excavations stay protected\n• Riser openings and slab penetrations stay covered or guarded\n• If something is unsafe, stop and report it"
+          "body": "\u2022 No scaffold tag, no access\n\u2022 Never tamper with a scaffold\n\u2022 Check ladders and hop-ups before every use\n\u2022 Stairwells, openings and excavations stay protected\n\u2022 Riser openings and slab penetrations stay covered or guarded\n\u2022 If something is unsafe, stop and report it"
         }
       ],
       "questions": []
@@ -346,23 +346,23 @@
       "sections": [
         {
           "heading": "Avoid it if you can",
-          "body": "The safest lift is the one you do not have to make.\n• If mechanical aids are available (trolleys, hoists, forklifts), use them. Only operate plant you are trained and authorised to use.\n• Ask yourself: is this load within my capability? If not, get help or a lifting aid.\n• There is no legal safe weight. 25 kg is a guideline figure, not a limit, and the shape, grip and distance matter as much as the weight."
+          "body": "The safest lift is the one you do not have to make.\n\u2022 If mechanical aids are available (trolleys, hoists, forklifts), use them. Only operate plant you are trained and authorised to use.\n\u2022 Ask yourself: is this load within my capability? If not, get help or a lifting aid.\n\u2022 There is no legal safe weight. 25 kg is a guideline figure, not a limit, and the shape, grip and distance matter as much as the weight."
         },
         {
           "heading": "Check before you lift",
-          "body": "• The load: how heavy is it? Is it sharp, awkward or hazardous? Could loose parts fall off?\n• The route: is it clear and well lit? Any trip hazards, overhead cables or obstacles? Clear them first.\n• Where it is going: is the stacking area clear, level and safe? How high can you stack? Will you need battens?\n• PPE: boots, gloves and the right clothing for the job.\nDe-stacking can be more dangerous than stacking, so take extra care."
+          "body": "\u2022 The load: how heavy is it? Is it sharp, awkward or hazardous? Could loose parts fall off?\n\u2022 The route: is it clear and well lit? Any trip hazards, overhead cables or obstacles? Clear them first.\n\u2022 Where it is going: is the stacking area clear, level and safe? How high can you stack? Will you need battens?\n\u2022 PPE: boots, gloves and the right clothing for the job.\nDe-stacking can be more dangerous than stacking, so take extra care."
         },
         {
           "heading": "Lifting the right way",
-          "body": "• Stand close to the load, feet about hip width apart, one foot pointing the way you are going. Do not overreach.\n• Bend your knees and keep your back as straight as you can.\n• Get a firm grip where your hands will not slip.\n• Lift smoothly with your legs. Do not jerk the load.\n• Keep it close to your body.\n• Do not twist. Move your feet to turn.\n• Make sure you can see where you are going."
+          "body": "\u2022 Stand close to the load, feet about hip width apart, one foot pointing the way you are going. Do not overreach.\n\u2022 Bend your knees and keep your back as straight as you can.\n\u2022 Get a firm grip where your hands will not slip.\n\u2022 Lift smoothly with your legs. Do not jerk the load.\n\u2022 Keep it close to your body.\n\u2022 Do not twist. Move your feet to turn.\n\u2022 Make sure you can see where you are going."
         },
         {
           "heading": "Team lifts and speaking up",
-          "body": "• Where two or more people are lifting, pick one person to give the instructions.\n• Share the weight equally and move together.\n• Agree the route and where the load is going before you lift.\nIf you are not happy lifting something, do not risk it. Stop and tell your supervisor. A different method or extra help is always better than a damaged back.\nThink about: what checks will you make before your next heavy lift today?"
+          "body": "\u2022 Where two or more people are lifting, pick one person to give the instructions.\n\u2022 Share the weight equally and move together.\n\u2022 Agree the route and where the load is going before you lift.\nIf you are not happy lifting something, do not risk it. Stop and tell your supervisor. A different method or extra help is always better than a damaged back.\nThink about: what checks will you make before your next heavy lift today?"
         },
         {
           "heading": "Remember",
-          "body": "• Use mechanical aids where you can, but only if trained.\n• Check the load, the route and the stacking area first.\n• Knees bent, back straight, load close.\n• No twisting, no jerking, no overreaching.\n• One person leads a team lift.\n• Not happy? Stop and tell your supervisor."
+          "body": "\u2022 Use mechanical aids where you can, but only if trained.\n\u2022 Check the load, the route and the stacking area first.\n\u2022 Knees bent, back straight, load close.\n\u2022 No twisting, no jerking, no overreaching.\n\u2022 One person leads a team lift.\n\u2022 Not happy? Stop and tell your supervisor."
         }
       ],
       "questions": []
@@ -375,31 +375,31 @@
       "sections": [
         {
           "heading": "Know the hazards",
-          "body": "A grinder disc spins fast enough to cause deep cuts in a split second. The main hazards are:\n• Contact with the spinning disc\n• The disc shattering and throwing fragments\n• Kickback, where the disc snags and the tool jumps back at you\n• Sparks starting a fire\n• Dust, including silica from concrete, brick and stone\n• Noise and vibration (HAVS, which damages the nerves and blood vessels in your hands)\n• A damaged battery overheating"
+          "body": "A grinder disc spins fast enough to cause deep cuts in a split second. The main hazards are:\n\u2022 Contact with the spinning disc\n\u2022 The disc shattering and throwing fragments\n\u2022 Kickback, where the disc snags and the tool jumps back at you\n\u2022 Sparks starting a fire\n\u2022 Dust, including silica from concrete, brick and stone\n\u2022 Noise and vibration (HAVS, which damages the nerves and blood vessels in your hands)\n\u2022 A damaged battery overheating"
         },
         {
           "heading": "Check before you start",
-          "body": "• Tool body in good condition, no cracks\n• Guard fitted and secure. Never remove it\n• Correct disc for the material you are cutting\n• Disc speed (RPM) rating matches or beats the tool's speed\n• Disc free of cracks, chips or damage\n• Battery fully seated, with no swelling, damage or signs of overheating\n• Flammable materials cleared away and a fire extinguisher close by\nIf the tool or battery is defective, take it out of use straight away, label it and tell your supervisor."
+          "body": "\u2022 Tool body in good condition, no cracks\n\u2022 Guard fitted and secure. Never remove it\n\u2022 Correct disc for the material you are cutting\n\u2022 Disc speed (RPM) rating matches or beats the tool's speed\n\u2022 Disc free of cracks, chips or damage\n\u2022 Battery fully seated, with no swelling, damage or signs of overheating\n\u2022 Flammable materials cleared away and a fire extinguisher close by\nIf the tool or battery is defective, take it out of use straight away, label it and tell your supervisor."
         },
         {
           "heading": "Wear the right PPE",
-          "body": "Every time you pick up a grinder, wear:\n• Safety helmet\n• Impact-rated eye protection plus a face shield\n• Hearing protection\n• Cut-resistant gloves\n• Safety boots\n• FFP3 mask (or other suitable RPE) when cutting or grinding dusty materials. You must be face fit tested for the mask you wear.\nGlasses alone will not stop a disc fragment hitting your face. Use the shield."
+          "body": "Every time you pick up a grinder, wear:\n\u2022 Safety helmet\n\u2022 Impact-rated eye protection plus a face shield\n\u2022 Hearing protection\n\u2022 Cut-resistant gloves\n\u2022 Safety boots\n\u2022 FFP3 mask (or other suitable RPE) when cutting or grinding dusty materials. You must be face fit tested for the mask you wear.\nGlasses alone will not stop a disc fragment hitting your face. Use the shield."
         },
         {
           "heading": "Cutting safely",
-          "body": "• Two hands on the tool at all times\n• Stand to the side of the disc, never in line with it\n• Let the disc reach full speed before it touches the work\n• Do not force or twist the disc. Let it cut\n• Clamp or secure the workpiece. Never hold it in your hand or under your foot\n• Point sparks away from people and anything that can burn\n• Take the battery out before changing a disc or doing any maintenance\nThink about: where would the disc go if it kicked back right now?"
+          "body": "\u2022 Two hands on the tool at all times\n\u2022 Stand to the side of the disc, never in line with it\n\u2022 Let the disc reach full speed before it touches the work\n\u2022 Do not force or twist the disc. Let it cut\n\u2022 Clamp or secure the workpiece. Never hold it in your hand or under your foot\n\u2022 Point sparks away from people and anything that can burn\n\u2022 Take the battery out before changing a disc or doing any maintenance\nThink about: where would the disc go if it kicked back right now?"
         },
         {
           "heading": "Dust and vibration",
-          "body": "Silica dust causes lung disease that does not go away. Vibration builds up over time and damages your hands.\n• Use water suppression or on-tool extraction wherever possible\n• Keep cutting time down and take regular breaks\n• Keep your RPE on while dust is in the air\n• Report any numbness, tingling or whitening of your fingers to your supervisor straight away. Caught early, it can be managed."
+          "body": "Silica dust causes lung disease that does not go away. Vibration builds up over time and damages your hands.\n\u2022 Use water suppression or on-tool extraction wherever possible\n\u2022 Keep cutting time down and take regular breaks\n\u2022 Keep your RPE on while dust is in the air\n\u2022 Report any numbness, tingling or whitening of your fingers to your supervisor straight away. Caught early, it can be managed."
         },
         {
           "heading": "After use",
-          "body": "• Let the disc stop completely before you put the tool down\n• Remove the battery\n• Store the tool and batteries away from heat and moisture\n• Check the area for hot spots or smouldering material where sparks landed\n• Leave the area clean and safe\nIf you damaged a disc or the tool took a knock, report it rather than leave it for the next person."
+          "body": "\u2022 Let the disc stop completely before you put the tool down\n\u2022 Remove the battery\n\u2022 Store the tool and batteries away from heat and moisture\n\u2022 Check the area for hot spots or smouldering material where sparks landed\n\u2022 Leave the area clean and safe\nIf you damaged a disc or the tool took a knock, report it rather than leave it for the next person."
         },
         {
           "heading": "Remember",
-          "body": "• A battery grinder is just as dangerous as a corded one\n• Guard on, correct disc, check it before every use\n• Two hands, stand to the side, workpiece secured\n• Face shield, eye protection, gloves, hearing protection and RPE for dusty work\n• Battery out before changing discs\n• Defective tool or battery: stop, take it out of use and report it"
+          "body": "\u2022 A battery grinder is just as dangerous as a corded one\n\u2022 Guard on, correct disc, check it before every use\n\u2022 Two hands, stand to the side, workpiece secured\n\u2022 Face shield, eye protection, gloves, hearing protection and RPE for dusty work\n\u2022 Battery out before changing discs\n\u2022 Defective tool or battery: stop, take it out of use and report it"
         }
       ],
       "questions": []
@@ -412,27 +412,27 @@
       "sections": [
         {
           "heading": "Right tool for the job",
-          "body": "• Always use the correct tool for the task.\n• Never force a tool to do something it was not designed for.\n• Screwdrivers are not chisels or levers. Use a proper chisel, pry bar or packer lifter instead.\n• Use the right size of screwdriver or spanner for the fixing. The wrong size slips, rounds the head and catches your knuckles."
+          "body": "\u2022 Always use the correct tool for the task.\n\u2022 Never force a tool to do something it was not designed for.\n\u2022 Screwdrivers are not chisels or levers. Use a proper chisel, pry bar or packer lifter instead.\n\u2022 Use the right size of screwdriver or spanner for the fixing. The wrong size slips, rounds the head and catches your knuckles."
         },
         {
           "heading": "Check before use",
-          "body": "Look your tools over before you start each day.\n• Cracked or loose handles, loose hammer heads, worn tips, bent or chipped blades.\n• Chisels and planes: blades sharp, no mushroomed heads, handles sound.\n• Sealant guns: working trigger and plunger.\nIf a tool is damaged, take it out of use straight away and replace it or tell your supervisor.\nThink about: what checks will you make on your tools before starting today?"
+          "body": "Look your tools over before you start each day.\n\u2022 Cracked or loose handles, loose hammer heads, worn tips, bent or chipped blades.\n\u2022 Chisels and planes: blades sharp, no mushroomed heads, handles sound.\n\u2022 Sealant guns: working trigger and plunger.\nIf a tool is damaged, take it out of use straight away and replace it or tell your supervisor.\nThink about: what checks will you make on your tools before starting today?"
         },
         {
           "heading": "Using tools safely",
-          "body": "• Cut and strike away from your body, and away from anyone else.\n• Watch for sharp edges when trimming beading, silicone or gaskets.\n• Take extra care with sharp blades, burrs and freshly cut pipe ends. A slipped chisel or screwdriver can crack a unit or cause serious cuts.\n• Do not carry tools in your pockets. Use a tool belt or bag.\n• Do not leave tools on joists, ladders or scaffolds where they could fall on someone below."
+          "body": "\u2022 Cut and strike away from your body, and away from anyone else.\n\u2022 Watch for sharp edges when trimming beading, silicone or gaskets.\n\u2022 Take extra care with sharp blades, burrs and freshly cut pipe ends. A slipped chisel or screwdriver can crack a unit or cause serious cuts.\n\u2022 Do not carry tools in your pockets. Use a tool belt or bag.\n\u2022 Do not leave tools on joists, ladders or scaffolds where they could fall on someone below."
         },
         {
           "heading": "Look after your tools",
-          "body": "• Keep blades sharp and clean. Blunt blades need more force and are more likely to slip.\n• Keep handles free of oil, grease and sealant so you keep a good grip.\n• Store tools safely when not in use, especially knives and chisels. Retract or cover blades.\n• Keep the work area clear of tools and offcuts, and put tools back in storage at the end of the job."
+          "body": "\u2022 Keep blades sharp and clean. Blunt blades need more force and are more likely to slip.\n\u2022 Keep handles free of oil, grease and sealant so you keep a good grip.\n\u2022 Store tools safely when not in use, especially knives and chisels. Retract or cover blades.\n\u2022 Keep the work area clear of tools and offcuts, and put tools back in storage at the end of the job."
         },
         {
           "heading": "Wear the right PPE",
-          "body": "• Safety glasses when chiselling, hammering, cutting or drilling. Chips and fragments travel fast.\n• Cut-resistant gloves when handling sheet materials and sharp edges.\n• Safety boots with toe protection against dropped pipe, fittings and tools.\nPPE is your last line of defence, not a replacement for using the tool properly. If your PPE is damaged or missing, tell your supervisor."
+          "body": "\u2022 Safety glasses when chiselling, hammering, cutting or drilling. Chips and fragments travel fast.\n\u2022 Cut-resistant gloves when handling sheet materials and sharp edges.\n\u2022 Safety boots with toe protection against dropped pipe, fittings and tools.\nPPE is your last line of defence, not a replacement for using the tool properly. If your PPE is damaged or missing, tell your supervisor."
         },
         {
           "heading": "Remember",
-          "body": "• Right tool for the right job.\n• Inspect and look after your tools daily.\n• Damaged tool means out of use straight away.\n• Work carefully with sharp blades, slips cause serious injuries.\n• Wear the correct PPE.\n• Keep the work area tidy and tools stored safely. It protects you, your team and the customer's property."
+          "body": "\u2022 Right tool for the right job.\n\u2022 Inspect and look after your tools daily.\n\u2022 Damaged tool means out of use straight away.\n\u2022 Work carefully with sharp blades, slips cause serious injuries.\n\u2022 Wear the correct PPE.\n\u2022 Keep the work area tidy and tools stored safely. It protects you, your team and the customer's property."
         }
       ],
       "questions": []
@@ -445,23 +445,23 @@
       "sections": [
         {
           "heading": "Why dust is dangerous",
-          "body": "Dust is tiny, dry particles in the air. It is made whenever materials are cut, drilled, sanded, shovelled or swept, so most trades create it at some point.\nDust is easy to ignore because:\n• The most harmful particles are invisible to the naked eye\n• You feel fine on the day\n• The damage to your lungs can take many years to develop\nBy the time you notice symptoms, it is too late to reverse."
+          "body": "Dust is tiny, dry particles in the air. It is made whenever materials are cut, drilled, sanded, shovelled or swept, so most trades create it at some point.\nDust is easy to ignore because:\n\u2022 The most harmful particles are invisible to the naked eye\n\u2022 You feel fine on the day\n\u2022 The damage to your lungs can take many years to develop\nBy the time you notice symptoms, it is too late to reverse."
         },
         {
           "heading": "Control it at the source",
-          "body": "The first job is to stop dust getting into the air in the first place. On every task that makes dust:\n• Use water suppression or on-tool extraction\n• Extraction units must be at least M class\n• This applies to cutting, sanding and cleaning up\nNever dry sweep or use a blower to clear dust. Use a suitable vacuum instead.\nHSE inspectors check dust control on site against their guidance CIS36 (construction dust) and CIS39 (on-tool extraction)."
+          "body": "The first job is to stop dust getting into the air in the first place. On every task that makes dust:\n\u2022 Use water suppression or on-tool extraction\n\u2022 Extraction units must be at least M class\n\u2022 This applies to cutting, sanding and cleaning up\nNever dry sweep or use a blower to clear dust. Use a suitable vacuum instead.\nHSE inspectors check dust control on site against their guidance CIS36 (construction dust) and CIS39 (on-tool extraction)."
         },
         {
           "heading": "Wear the right mask",
-          "body": "Extraction and suppression reduce dust but do not remove it all, so you also need respiratory protection:\n• Wear an FFP3 mask whenever your work creates dust\n• You must have been face fit tested for it\n• Use the exact make and model you were tested on. A different mask may not seal on your face.\n• An air-fed hood or helmet is an alternative that does not need face fit testing\nIf your mask is damaged, wet or hard to breathe through, change it."
+          "body": "Extraction and suppression reduce dust but do not remove it all, so you also need respiratory protection:\n\u2022 Wear an FFP3 mask whenever your work creates dust\n\u2022 You must have been face fit tested for it\n\u2022 Use the exact make and model you were tested on. A different mask may not seal on your face.\n\u2022 An air-fed hood or helmet is an alternative that does not need face fit testing\nIf your mask is damaged, wet or hard to breathe through, change it."
         },
         {
           "heading": "Clean shaven means a seal",
-          "body": "A tight-fitting mask only works if it seals against your skin. Stubble or a beard lets dusty air leak straight past the edges, so the mask gives you little protection.\n• Be clean shaven where the mask touches your face\n• If you have a beard you want to keep, you need an air-fed hood instead. Speak to your supervisor.\nThink about: when did you last shave before a dusty job, and did your mask really seal?"
+          "body": "A tight-fitting mask only works if it seals against your skin. Stubble or a beard lets dusty air leak straight past the edges, so the mask gives you little protection.\n\u2022 Be clean shaven where the mask touches your face\n\u2022 If you have a beard you want to keep, you need an air-fed hood instead. Speak to your supervisor.\nThink about: when did you last shave before a dusty job, and did your mask really seal?"
         },
         {
           "heading": "Remember",
-          "body": "• Dust damage is often invisible and permanent\n• Use suppression or M class extraction (minimum) at the source\n• Wear an FFP3 mask you have been face fit tested for\n• Same make and model as your fit test\n• Clean shaven, or use an air-fed hood\n• No dry sweeping: vacuum it up"
+          "body": "\u2022 Dust damage is often invisible and permanent\n\u2022 Use suppression or M class extraction (minimum) at the source\n\u2022 Wear an FFP3 mask you have been face fit tested for\n\u2022 Same make and model as your fit test\n\u2022 Clean shaven, or use an air-fed hood\n\u2022 No dry sweeping: vacuum it up"
         }
       ],
       "questions": []
@@ -478,19 +478,19 @@
         },
         {
           "heading": "How it gets into you",
-          "body": "• Breathing in (inhalation): dusts, fumes, mists, vapours and fibres\n• Skin and eyes (absorption): chemicals or infections passing through the skin or into the eyes\n• Swallowing (ingestion): eating or smoking with contaminated hands, or swallowing a substance by accident\n• Through a wound (injection): needles, nails and other sharp objects\nThink about: which products you use every week could get in by each of these routes?"
+          "body": "\u2022 Breathing in (inhalation): dusts, fumes, mists, vapours and fibres\n\u2022 Skin and eyes (absorption): chemicals or infections passing through the skin or into the eyes\n\u2022 Swallowing (ingestion): eating or smoking with contaminated hands, or swallowing a substance by accident\n\u2022 Through a wound (injection): needles, nails and other sharp objects\nThink about: which products you use every week could get in by each of these routes?"
         },
         {
           "heading": "What you must do",
-          "body": "• Make sure there is a COSHH assessment for the substance before you use it\n• Ask whether a less harmful product could do the job instead\n• Use ventilation or extraction where it is needed\n• Know and use the controls and PPE the assessment requires\n• Know where the washing facilities and first aid kit are before you start\nIf you get a substance on your skin or in your eyes, wash it off straight away and report it to your supervisor."
+          "body": "\u2022 Make sure there is a COSHH assessment for the substance before you use it\n\u2022 Ask whether a less harmful product could do the job instead\n\u2022 Use ventilation or extraction where it is needed\n\u2022 Know and use the controls and PPE the assessment requires\n\u2022 Know where the washing facilities and first aid kit are before you start\nIf you get a substance on your skin or in your eyes, wash it off straight away and report it to your supervisor."
         },
         {
           "heading": "What you must never do",
-          "body": "• Never use a hazardous substance you have not been trained to use, for example solvents\n• Never eat, drink or smoke while handling substances. Wash your hands first.\n• Never keep or take home contaminated clothing. Wash it properly or dispose of it.\n• Never leave hazardous substances lying around. Lock them away after use."
+          "body": "\u2022 Never use a hazardous substance you have not been trained to use, for example solvents\n\u2022 Never eat, drink or smoke while handling substances. Wash your hands first.\n\u2022 Never keep or take home contaminated clothing. Wash it properly or dispose of it.\n\u2022 Never leave hazardous substances lying around. Lock them away after use."
         },
         {
           "heading": "Remember",
-          "body": "• No COSHH assessment, no use\n• Substances get in by breathing, skin, swallowing and wounds\n• Use the controls and PPE the assessment says\n• Wash your hands before eating, drinking or smoking\n• Lock substances away after use\n• If you are exposed, wash it off and report it"
+          "body": "\u2022 No COSHH assessment, no use\n\u2022 Substances get in by breathing, skin, swallowing and wounds\n\u2022 Use the controls and PPE the assessment says\n\u2022 Wash your hands before eating, drinking or smoking\n\u2022 Lock substances away after use\n\u2022 If you are exposed, wash it off and report it"
         }
       ],
       "questions": []
@@ -511,11 +511,11 @@
         },
         {
           "heading": "Earplugs",
-          "body": "• Make sure they fit each ear and are properly inserted. A loose plug does very little\n• Have clean hands when handling any earplugs\n• Use disposable earplugs once only, then bin them\n• Clean reusable earplugs as the manufacturer's instructions say\n• Never use cotton wool or tissue. It does not protect you"
+          "body": "\u2022 Make sure they fit each ear and are properly inserted. A loose plug does very little\n\u2022 Have clean hands when handling any earplugs\n\u2022 Use disposable earplugs once only, then bin them\n\u2022 Clean reusable earplugs as the manufacturer's instructions say\n\u2022 Never use cotton wool or tissue. It does not protect you"
         },
         {
           "heading": "Earmuffs",
-          "body": "• The seals must fit well all the way round your head\n• Wear them the correct way round\n• Check the seals are in good condition. Cracked or hard seals let noise in, so get them replaced\n• Do not bend the headband to change the pressure. It stops them sealing properly\n• Hair, hoods and the arms of glasses under the seal also let noise in\nIf your earmuffs are damaged, report it to your supervisor and get a replacement."
+          "body": "\u2022 The seals must fit well all the way round your head\n\u2022 Wear them the correct way round\n\u2022 Check the seals are in good condition. Cracked or hard seals let noise in, so get them replaced\n\u2022 Do not bend the headband to change the pressure. It stops them sealing properly\n\u2022 Hair, hoods and the arms of glasses under the seal also let noise in\nIf your earmuffs are damaged, report it to your supervisor and get a replacement."
         },
         {
           "heading": "Radios and others",
@@ -523,7 +523,7 @@
         },
         {
           "heading": "Remember",
-          "body": "• Noise damage is permanent and cannot be reversed\n• Shouting to be heard means you need hearing protection\n• Wear it all the time you are in the noisy area\n• Earplugs fitted properly, clean hands, disposables used once only\n• Earmuff seals in good condition, headband never bent\n• Never use cotton wool or music headphones as protection"
+          "body": "\u2022 Noise damage is permanent and cannot be reversed\n\u2022 Shouting to be heard means you need hearing protection\n\u2022 Wear it all the time you are in the noisy area\n\u2022 Earplugs fitted properly, clean hands, disposables used once only\n\u2022 Earmuff seals in good condition, headband never bent\n\u2022 Never use cotton wool or music headphones as protection"
         }
       ],
       "questions": []
@@ -536,19 +536,19 @@
       "sections": [
         {
           "heading": "Why sites catch fire",
-          "body": "A fire needs fuel, heat and oxygen. Sites have plenty of all three.\n• Hot works: welding, cutting and grinding. Sparks can smoulder for hours.\n• Temporary electrics: overloaded leads, damaged cables, poor connections.\n• Flammables: insulation, packaging, fuel, solvents, flux, jointing compounds and gas bottles.\n• Waste: packaging, off-cuts and rags help fire spread.\n• Smoking: carelessly dropped cigarettes."
+          "body": "A fire needs fuel, heat and oxygen. Sites have plenty of all three.\n\u2022 Hot works: welding, cutting and grinding. Sparks can smoulder for hours.\n\u2022 Temporary electrics: overloaded leads, damaged cables, poor connections.\n\u2022 Flammables: insulation, packaging, fuel, solvents, flux, jointing compounds and gas bottles.\n\u2022 Waste: packaging, off-cuts and rags help fire spread.\n\u2022 Smoking: carelessly dropped cigarettes."
         },
         {
           "heading": "Controls on site",
-          "body": "• A fire risk assessment is in place and reviewed as the job changes.\n• Hot works only go ahead under a hot work permit, followed every time.\n• Fire points with extinguishers and alarms. Know where they are and which extinguisher type is nearest.\n• Smoking only in designated areas.\n• Emergency plan: alarm, escape routes and assembly point clearly marked and covered at induction.\nThink about: who issues hot work permits on this site?"
+          "body": "\u2022 A fire risk assessment is in place and reviewed as the job changes.\n\u2022 Hot works only go ahead under a hot work permit, followed every time.\n\u2022 Fire points with extinguishers and alarms. Know where they are and which extinguisher type is nearest.\n\u2022 Smoking only in designated areas.\n\u2022 Emergency plan: alarm, escape routes and assembly point clearly marked and covered at induction.\nThink about: who issues hot work permits on this site?"
         },
         {
           "heading": "What you must do",
-          "body": "• Follow the site rules on smoking, hot works and storing flammables.\n• Store fuels, gases and solvents in proper containers away from ignition sources.\n• Tidy up daily. Do not let waste build up.\n• Check cables, leads and tools before use.\n• Keep escape routes, stairs, corridors and fire doors clear. Never wedge open or remove temporary fire doors.\n• Report damaged fire kit: extinguishers, alarms, emergency lighting.\n• Challenge unsafe behaviour, or report it."
+          "body": "\u2022 Follow the site rules on smoking, hot works and storing flammables.\n\u2022 Store fuels, gases and solvents in proper containers away from ignition sources.\n\u2022 Tidy up daily. Do not let waste build up.\n\u2022 Check cables, leads and tools before use.\n\u2022 Keep escape routes, stairs, corridors and fire doors clear. Never wedge open or remove temporary fire doors.\n\u2022 Report damaged fire kit: extinguishers, alarms, emergency lighting.\n\u2022 Challenge unsafe behaviour, or report it."
         },
         {
           "heading": "If you discover a fire",
-          "body": "• Raise the alarm straight away.\n• Warn others nearby.\n• Only tackle the fire if you are trained and it is safe to do so.\n• Leave by the nearest safe route to the assembly point.\n• Do not go back in until you are told it is safe.\nKnow the alarm sound and where the assembly point is. Fire drills will be carried out."
+          "body": "\u2022 Raise the alarm straight away.\n\u2022 Warn others nearby.\n\u2022 Only tackle the fire if you are trained and it is safe to do so.\n\u2022 Leave by the nearest safe route to the assembly point.\n\u2022 Do not go back in until you are told it is safe.\nKnow the alarm sound and where the assembly point is. Fire drills will be carried out."
         },
         {
           "heading": "The law in brief",
@@ -556,7 +556,7 @@
         },
         {
           "heading": "Remember",
-          "body": "• Keep the site tidy and waste cleared daily.\n• No hot works without a permit.\n• Smoke only in designated areas.\n• Keep escape routes and fire doors clear.\n• Know the alarm, the nearest extinguisher and the assembly point.\n• If fire breaks out: raise the alarm, get out, do not go back in."
+          "body": "\u2022 Keep the site tidy and waste cleared daily.\n\u2022 No hot works without a permit.\n\u2022 Smoke only in designated areas.\n\u2022 Keep escape routes and fire doors clear.\n\u2022 Know the alarm, the nearest extinguisher and the assembly point.\n\u2022 If fire breaks out: raise the alarm, get out, do not go back in."
         }
       ],
       "questions": []
@@ -569,23 +569,23 @@
       "sections": [
         {
           "heading": "Why it matters",
-          "body": "• Fire: sites are full of things that burn, such as packaging, insulation, solvents, flux, adhesives, foam and fuel. A cigarette end can smoulder for a long time before it takes hold, often after everyone has gone home.\n• Second-hand smoke: people who do not smoke should not have to breathe yours. It is a real health risk, not just a nuisance.\n• Everyone else's safety depends on you getting this right."
+          "body": "\u2022 Fire: sites are full of things that burn, such as packaging, insulation, solvents, flux, adhesives, foam and fuel. A cigarette end can smoulder for a long time before it takes hold, often after everyone has gone home.\n\u2022 Second-hand smoke: people who do not smoke should not have to breathe yours. It is a real health risk, not just a nuisance.\n\u2022 Everyone else's safety depends on you getting this right."
         },
         {
           "heading": "What the law says",
-          "body": "• Health and Safety at Work etc. Act 1974: everyone has a duty to work safely and not put others at risk.\n• Smoke-free law (Health Act 2006 and the Smoke-free (Premises and Enforcement) Regulations 2006): no smoking in enclosed or substantially enclosed workplaces. That includes site cabins, welfare units and enclosed parts of the building.\n• CDM 2015: the site must manage fire and health risks, and smoking rules are part of that."
+          "body": "\u2022 Health and Safety at Work etc. Act 1974: everyone has a duty to work safely and not put others at risk.\n\u2022 Smoke-free law (Health Act 2006 and the Smoke-free (Premises and Enforcement) Regulations 2006): no smoking in enclosed or substantially enclosed workplaces. That includes site cabins, welfare units and enclosed parts of the building.\n\u2022 CDM 2015: the site must manage fire and health risks, and smoking rules are part of that."
         },
         {
           "heading": "Know the smoking areas",
-          "body": "• Find out where the designated smoking areas are at your induction. If you are not sure, ask your supervisor.\n• Only smoke there. Not on the scaffold, not in the plant room, not in a doorway, not behind the cabins.\n• Put ends out properly and use the bins or containers provided. Never flick them into skips, waste piles or drains.\n• Keep smoking areas away from fire exits and do not block routes while you are there.\nThink about: where is the nearest smoking area to where you are working today?"
+          "body": "\u2022 Find out where the designated smoking areas are at your induction. If you are not sure, ask your supervisor.\n\u2022 Only smoke there. Not on the scaffold, not in the plant room, not in a doorway, not behind the cabins.\n\u2022 Put ends out properly and use the bins or containers provided. Never flick them into skips, waste piles or drains.\n\u2022 Keep smoking areas away from fire exits and do not block routes while you are there.\nThink about: where is the nearest smoking area to where you are working today?"
         },
         {
           "heading": "Zero tolerance",
-          "body": "Smoking outside a designated area is not a warning-and-move-on issue on this site.\n• It will be dealt with straight away.\n• It will lead to disciplinary action, and you may be removed from site.\n• Breaking smoke-free law can also mean a fine.\nIf you see someone smoking where they should not be, tell your supervisor. You are protecting everyone on site, including them."
+          "body": "Smoking outside a designated area is not a warning-and-move-on issue on this site.\n\u2022 It will be dealt with straight away.\n\u2022 It will lead to disciplinary action, and you may be removed from site.\n\u2022 Breaking smoke-free law can also mean a fine.\nIf you see someone smoking where they should not be, tell your supervisor. You are protecting everyone on site, including them."
         },
         {
           "heading": "Remember",
-          "body": "• Designated smoking areas only, no exceptions.\n• Never smoke in cabins, welfare units or inside the building.\n• Put ends out fully and bin them in the containers provided.\n• Keep clear of flammable materials and fire exits.\n• Smoking anywhere else means disciplinary action."
+          "body": "\u2022 Designated smoking areas only, no exceptions.\n\u2022 Never smoke in cabins, welfare units or inside the building.\n\u2022 Put ends out fully and bin them in the containers provided.\n\u2022 Keep clear of flammable materials and fire exits.\n\u2022 Smoking anywhere else means disciplinary action."
         }
       ],
       "questions": []
@@ -598,23 +598,23 @@
       "sections": [
         {
           "heading": "The standard",
-          "body": "• Use the toilets provided, at all times.\n• No going anywhere else. That means not in the building, corners, behind cabins, in bottles or containers, in skips or down drains.\n• Wash your hands after using the toilet, every time, and before eating, drinking or smoking.\nThis is a basic standard of behaviour, not a nice-to-have."
+          "body": "\u2022 Use the toilets provided, at all times.\n\u2022 No going anywhere else. That means not in the building, corners, behind cabins, in bottles or containers, in skips or down drains.\n\u2022 Wash your hands after using the toilet, every time, and before eating, drinking or smoking.\nThis is a basic standard of behaviour, not a nice-to-have."
         },
         {
           "heading": "Why it matters",
-          "body": "• Health: human waste spreads germs onto surfaces, materials, tools and hands. Someone else then has to deal with it.\n• Respect: everyone deserves a clean, usable welfare space.\n• Site standards: visitors, clients and other trades see it, and it reflects on all of us.\n• The law: CDM 2015 requires proper welfare on every construction site, and misuse causes avoidable problems for the whole project."
+          "body": "\u2022 Health: human waste spreads germs onto surfaces, materials, tools and hands. Someone else then has to deal with it.\n\u2022 Respect: everyone deserves a clean, usable welfare space.\n\u2022 Site standards: visitors, clients and other trades see it, and it reflects on all of us.\n\u2022 The law: CDM 2015 requires proper welfare on every construction site, and misuse causes avoidable problems for the whole project."
         },
         {
           "heading": "If welfare isn't right",
-          "body": "Report it straight away to your supervisor or the site manager if the toilets are:\n• blocked or overflowing\n• too dirty to use\n• out of soap, water or anything to dry your hands\n• locked, or access is being restricted\n• too far away, or there are not enough for the number of people on site\nDo not \"sort it yourself\" somewhere else. Report it and it will get fixed."
+          "body": "Report it straight away to your supervisor or the site manager if the toilets are:\n\u2022 blocked or overflowing\n\u2022 too dirty to use\n\u2022 out of soap, water or anything to dry your hands\n\u2022 locked, or access is being restricted\n\u2022 too far away, or there are not enough for the number of people on site\nDo not \"sort it yourself\" somewhere else. Report it and it will get fixed."
         },
         {
           "heading": "What we expect",
-          "body": "• Use the facilities provided, every time.\n• Leave them as you would want to find them.\n• Report problems early. Small problems become big ones fast.\nAnyone found not using welfare properly will be dealt with as a disciplinary issue and may be removed from site.\nThink about: do you know where the toilets are, are they open right now, and who you report problems to today?"
+          "body": "\u2022 Use the facilities provided, every time.\n\u2022 Leave them as you would want to find them.\n\u2022 Report problems early. Small problems become big ones fast.\nAnyone found not using welfare properly will be dealt with as a disciplinary issue and may be removed from site.\nThink about: do you know where the toilets are, are they open right now, and who you report problems to today?"
         },
         {
           "heading": "Remember",
-          "body": "• Use the welfare provided. No exceptions.\n• Never relieve yourself anywhere else on site.\n• Wash your hands every time.\n• Keep it clean for the next person.\n• Report any problems to your supervisor straight away."
+          "body": "\u2022 Use the welfare provided. No exceptions.\n\u2022 Never relieve yourself anywhere else on site.\n\u2022 Wash your hands every time.\n\u2022 Keep it clean for the next person.\n\u2022 Report any problems to your supervisor straight away."
         }
       ],
       "questions": []
@@ -631,19 +631,19 @@
         },
         {
           "heading": "What to report",
-          "body": "Report it if you believe any of these may be happening:\n• A criminal offence or someone breaking the law\n• A miscarriage of justice\n• Health and safety being put at risk\n• Damage to the environment\n• Bribery or corruption, including bribery of foreign officials\n• Breaches of duties under the Building Safety Act 2022\n• Any of the above being covered up\nThink about: have you ever seen something on site that you knew was wrong but said nothing?"
+          "body": "Report it if you believe any of these may be happening:\n\u2022 A criminal offence or someone breaking the law\n\u2022 A miscarriage of justice\n\u2022 Health and safety being put at risk\n\u2022 Damage to the environment\n\u2022 Bribery or corruption, including bribery of foreign officials\n\u2022 Breaches of duties under the Building Safety Act 2022\n\u2022 Any of the above being covered up\nThink about: have you ever seen something on site that you knew was wrong but said nothing?"
         },
         {
           "heading": "How to raise it",
-          "body": "• First, speak to your supervisor or line manager\n• If that is not appropriate (for example, they are involved), go to a senior manager or another designated contact\n• For Building Safety Act concerns, report straight away to the Principal Contractor. Where necessary, you can also raise it with the Building Safety Regulator.\nIf you want confidential advice before you report, speak to the senior manager who handles whistleblowing."
+          "body": "\u2022 First, speak to your supervisor or line manager\n\u2022 If that is not appropriate (for example, they are involved), go to a senior manager or another designated contact\n\u2022 For Building Safety Act concerns, report straight away to the Principal Contractor. Where necessary, you can also raise it with the Building Safety Regulator.\nIf you want confidential advice before you report, speak to the senior manager who handles whistleblowing."
         },
         {
           "heading": "You are protected",
-          "body": "The Public Interest Disclosure Act 1998 protects workers who raise a genuine concern in the public interest.\n• You will not be penalised or treated unfairly for speaking up\n• You do not need proof, just an honest belief that something is wrong\n• Report it through the right channels so the protection applies\nSpeaking up protects you, your team and everyone who will use the building."
+          "body": "The Public Interest Disclosure Act 1998 protects workers who raise a genuine concern in the public interest.\n\u2022 You will not be penalised or treated unfairly for speaking up\n\u2022 You do not need proof, just an honest belief that something is wrong\n\u2022 Report it through the right channels so the protection applies\nSpeaking up protects you, your team and everyone who will use the building."
         },
         {
           "heading": "Remember",
-          "body": "• If something feels wrong or unsafe, report it straight away\n• Start with your supervisor or line manager\n• Go to a senior manager if that is not appropriate\n• Building Safety Act concerns go to the Principal Contractor\n• You are protected by law for raising a genuine concern"
+          "body": "\u2022 If something feels wrong or unsafe, report it straight away\n\u2022 Start with your supervisor or line manager\n\u2022 Go to a senior manager if that is not appropriate\n\u2022 Building Safety Act concerns go to the Principal Contractor\n\u2022 You are protected by law for raising a genuine concern"
         }
       ],
       "questions": []
@@ -660,19 +660,19 @@
         },
         {
           "heading": "Be competent",
-          "body": "• Only carry out tasks and use equipment you are trained and authorised for.\n• If you are asked to do something outside your competence, say so.\n• If you are unsure how something should be done, ask before you start, not after."
+          "body": "\u2022 Only carry out tasks and use equipment you are trained and authorised for.\n\u2022 If you are asked to do something outside your competence, say so.\n\u2022 If you are unsure how something should be done, ask before you start, not after."
         },
         {
           "heading": "Build to the design",
-          "body": "• Follow the approved drawings, levels and specifications exactly.\n• Do not change materials, dimensions or layouts without checking with your supervisor first.\n• If the drawings clash with each other or with what is on site, stop and report it.\n• Report any unexpected conditions or defects you find.\nThink about: what could happen if work is changed without approval?"
+          "body": "\u2022 Follow the approved drawings, levels and specifications exactly.\n\u2022 Do not change materials, dimensions or layouts without checking with your supervisor first.\n\u2022 If the drawings clash with each other or with what is on site, stop and report it.\n\u2022 Report any unexpected conditions or defects you find.\nThink about: what could happen if work is changed without approval?"
         },
         {
           "heading": "Check, record, then cover",
-          "body": "• Never cover up or conceal work until it has been checked and signed off.\n• Record what you have done when asked: inspections, tests or completed stages.\n• Keep work areas and access routes safe and inspected.\n• Talk to the other trades and your supervisor. Most problems come from poor communication."
+          "body": "\u2022 Never cover up or conceal work until it has been checked and signed off.\n\u2022 Record what you have done when asked: inspections, tests or completed stages.\n\u2022 Keep work areas and access routes safe and inspected.\n\u2022 Talk to the other trades and your supervisor. Most problems come from poor communication."
         },
         {
           "heading": "Remember",
-          "body": "• Only do work you are competent for.\n• Build exactly to the approved drawings and specification.\n• No changes without checking first.\n• Never cover work before it is signed off.\n• Record inspections and completed stages when required.\n• If something could affect safety, stop and tell your supervisor."
+          "body": "\u2022 Only do work you are competent for.\n\u2022 Build exactly to the approved drawings and specification.\n\u2022 No changes without checking first.\n\u2022 Never cover work before it is signed off.\n\u2022 Record inspections and completed stages when required.\n\u2022 If something could affect safety, stop and tell your supervisor."
         }
       ],
       "questions": []
@@ -685,30 +685,40 @@
       "sections": [
         {
           "heading": "What counts as hot works",
-          "body": "Any task that produces a flame, sparks or enough heat to start a fire:\n• Brazing and soldering with a blowtorch\n• Welding, including TIG and MIG\n• Grinding, cutting and disc work on pipe and steel\n• Heat guns and hot air tools used near combustibles\nIf you are not sure whether a job counts, treat it as hot works and ask."
+          "body": "Any task that produces a flame, sparks or enough heat to start a fire:\n\u2022 Brazing and soldering with a blowtorch\n\u2022 Welding, including TIG and MIG\n\u2022 Grinding, cutting and disc work on pipe and steel\n\u2022 Heat guns and hot air tools used near combustibles\nIf you are not sure whether a job counts, treat it as hot works and ask."
         },
         {
           "heading": "No permit, no hot works",
-          "body": "• A hot work permit must be issued before you start, by the site manager or whoever controls permits on that site.\n• Read it. It tells you where you can work, what time it runs to, what precautions are required and who the fire watch is.\n• The permit is for a set area and a set time. If the job moves or runs over, you need a new permit.\n• Keep the permit with you at the work area so it can be checked."
+          "body": "\u2022 A hot work permit must be issued before you start, by the site manager or whoever controls permits on that site.\n\u2022 Read it. It tells you where you can work, what time it runs to, what precautions are required and who the fire watch is.\n\u2022 The permit is for a set area and a set time. If the job moves or runs over, you need a new permit.\n\u2022 Keep the permit with you at the work area so it can be checked."
         },
         {
           "heading": "Before you start",
-          "body": "• Clear combustibles for at least 10 metres, or cover them with fire blankets or boards.\n• Check the other side of walls, floors and ceilings: heat travels through and sparks drop through gaps.\n• Check for pipe lagging, insulation, cables and packaging near the joint.\n• Have the right extinguisher within reach (CO2 or powder for most hot works, water for solid materials) and know how to use it.\n• Make sure smoke detectors are isolated where the permit says so, and reinstated after.\nThink about: what is behind the wall or below the floor where you are about to braze?"
+          "body": "\u2022 Clear combustibles for at least 10 metres, or cover them with fire blankets or boards.\n\u2022 Check the other side of walls, floors and ceilings: heat travels through and sparks drop through gaps.\n\u2022 Check for pipe lagging, insulation, cables and packaging near the joint.\n\u2022 Have the right extinguisher within reach (CO2 or powder for most hot works, water for solid materials) and know how to use it.\n\u2022 Make sure smoke detectors are isolated where the permit says so, and reinstated after.\nThink about: what is behind the wall or below the floor where you are about to braze?"
         },
         {
           "heading": "During the work",
-          "body": "• Keep the gas bottle upright, secured and with the hose and regulator in good condition.\n• Never leave a lit torch unattended, and turn it off at the bottle when you stop.\n• Keep a fire watch in place: someone whose only job is to look for fire while the hot works are going on.\n• Stop and reassess if anything changes: new materials arrive, the wind picks up, someone starts working nearby."
+          "body": "\u2022 Keep the gas bottle upright, secured and with the hose and regulator in good condition.\n\u2022 Never leave a lit torch unattended, and turn it off at the bottle when you stop.\n\u2022 Keep a fire watch in place: someone whose only job is to look for fire while the hot works are going on.\n\u2022 Stop and reassess if anything changes: new materials arrive, the wind picks up, someone starts working nearby."
         },
         {
           "heading": "After the work: the fire watch",
-          "body": "Most fires from hot works start after the job is finished, when a smouldering material catches hold.\n• The fire watch stays in the area for at least 60 minutes after the last hot work, or longer if the permit says so.\n• Check the area again before the permit is closed, including behind, below and above the work.\n• Close out the permit with the site manager. Do not just walk off site with it open.\n• Report any scorching, smouldering or near miss, however small."
+          "body": "Most fires from hot works start after the job is finished, when a smouldering material catches hold.\n\u2022 The fire watch stays in the area for at least 60 minutes after the last hot work, or longer if the permit says so.\n\u2022 Check the area again before the permit is closed, including behind, below and above the work.\n\u2022 Close out the permit with the site manager. Do not just walk off site with it open.\n\u2022 Report any scorching, smouldering or near miss, however small."
         },
         {
           "heading": "Remember",
-          "body": "• No permit, no hot works.\n• Clear or cover combustibles, and check the other side.\n• Right extinguisher within reach.\n• Never leave a lit torch; turn it off at the bottle.\n• Fire watch for 60 minutes after you finish, then close out the permit."
+          "body": "\u2022 No permit, no hot works.\n\u2022 Clear or cover combustibles, and check the other side.\n\u2022 Right extinguisher within reach.\n\u2022 Never leave a lit torch; turn it off at the bottle.\n\u2022 Fire watch for 60 minutes after you finish, then close out the permit."
         }
       ],
       "questions": []
     }
+  ],
+  "retired_training": [
+    "NVQ Level 2 Pipefitting",
+    "NVQ Level 3 Pipefitting",
+    "Hot Works Awareness",
+    "Working at Height",
+    "PASMA",
+    "IPAF",
+    "Asbestos Awareness",
+    "COSHH Awareness"
   ]
 }

@@ -19,6 +19,7 @@ app.use('/api/admin', require('./routes/admin'));
 app.use('/api/admin/rams', require('./routes/rams'));
 app.use('/api/admin/policies', require('./routes/policies'));
 app.use('/api/admin/diary', require('./routes/diary'));
+app.use('/api/admin/costs', require('./routes/costs'));
 app.use('/api/tresor', require('./routes/tresor'));
 
 // Branding, from this client's build

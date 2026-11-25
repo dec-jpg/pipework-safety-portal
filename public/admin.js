@@ -129,20 +129,25 @@
     ramsmaster: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/>',
     settings: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>',
     users: '<path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/>',
+    costs: '<path d="M3 3v18h18"/><path d="M7 15l4-5 4 3 5-7"/>',
+    hours: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+    materials: '<path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/>',
   };
   const NAV = [
     ['Overview'], ['', 'Dashboard'],
     ['People'], ['operatives', '{Ops}'], ['matrix', 'Training matrix'],
     ['Site work'], ['jobs', 'Jobs'], ['diaries', 'Site diaries'], ['talks', 'Toolbox talks'], ['unmatched', 'Signatures to match'],
+    ['Commercial', 'manager'], ['costs', 'Job costs', 'manager'], ['hours', 'Hours', 'manager'], ['materials', 'Materials', 'manager'],
     ['Company'], ['policies', 'Policies'],
     ['Admin', 'admin'], ['users', 'Users', 'admin'], ['ramsmaster', 'RAMS master', 'owner'], ['settings', 'Safety Simplified', 'owner'],
   ];
-  const CRUMB = { '': 'Site overview', operatives: 'Your {ops} and their details', matrix: 'Cards, tickets and expiry dates', jobs: 'Each job with its diary link, RAMS and sign-off', diaries: 'The daily record from every job',
+  const CRUMB = { costs: 'Value against cost on every job, labour priced from the diaries', hours: 'Hours by person from the site diaries', materials: 'Price list for costing materials onto jobs', '': 'Site overview', operatives: 'Your {ops} and their details', matrix: 'Cards, tickets and expiry dates', jobs: 'Each job with its diary link, RAMS and sign-off', diaries: 'The daily record from every job',
     talks: 'Issue, sign and track', unmatched: 'Signatures from people not on the register', settings: 'Training list and account settings', users: 'Office logins', policies: 'Company policies, kept current by Safety Simplified and signed by the director', ramsmaster: 'The company method statement, risk assessments and COSHH that every site RAMS is built from' };
 
   function shell() {
-    const allowed = r => !r || (r === 'owner' ? isOwner() : isAdmin());
-    const items = NAV.filter(n => (n.length === 1 || n[1] === 'admin' ? allowed(n[1]) : allowed(n[2]))).map(n => (n.length === 1 || n[1] === 'admin' && n.length === 2
+    const allowed = r => !r || (r === 'owner' ? isOwner() : r === 'manager' ? canEdit() : isAdmin());
+    const isLabel = n => n.length === 1 || (n.length === 2 && ['admin', 'manager'].includes(n[1]));
+    const items = NAV.filter(n => (isLabel(n) ? allowed(n[1]) : allowed(n[2]))).map(n => (isLabel(n)
       ? `<div class="nav-label">${n[0]}</div>`
       : `<a href="#/${n[0]}" data-nav="${n[0]}"><svg class="ic" viewBox="0 0 24 24">${ICONS[n[0]]}</svg>${esc(n[1])}<span class="count hidden" data-count="${n[0]}"></span></a>`)).join('');
     root.innerHTML = tx(`<div class="ad-shell"><aside class="ad-nav" id="rail"><div class="rail-brand"><div class="logo"><img src="/logo" alt="${esc(brand.name)}" onerror="this.parentNode.remove()"></div>
@@ -174,7 +179,7 @@
     document.getElementById('vt').textContent = tx(nav ? nav[1] : 'Dashboard');
     document.getElementById('vc').textContent = tx(`${brand.name} · ${CRUMB[view || ''] || ''}`);
     window.scrollTo(0, 0);
-    const views = { '': dashboard, operatives, matrix: matrixView, jobs: jobsView, diaries: diariesView, talks: talksView, unmatched, settings, users, ramsmaster: ramsMaster, policies: policiesView };
+    const views = { '': dashboard, operatives, matrix: matrixView, jobs: jobsView, diaries: diariesView, costs: costsView, hours: hoursView, materials: materialsView, talks: talksView, unmatched, settings, users, ramsmaster: ramsMaster, policies: policiesView };
     setMain('<p class="muted">Loading</p>');
     (views[view] || dashboard)(params, id).catch(e => setMain(`<div class="note err">${esc(e.message)}</div>`));
     updateCounts();
@@ -201,6 +206,10 @@
   async function dashboard() {
     const d = await api('/dashboard');
     const c = d.counts;
+    if (canEdit()) {
+      const m = await api('/costs/summary').catch(() => null);
+      if (m) { const live = m.rows.filter(j => j.status === 'live'); d.money = { rows: m.rows, value: live.reduce((a, j) => a + j.value, 0), margin: live.reduce((a, j) => a + j.margin, 0) }; }
+    }
     const flags = [];
     const expired = d.tickets.filter(t => t.status === 'expired'), expiring = d.tickets.filter(t => t.status === 'expiring');
     if (expired.length) flags.push(['red', `${expired.length} training record${expired.length === 1 ? ' has' : 's have'} expired.`, '#/matrix']);
@@ -210,6 +219,13 @@
     d.jobs.filter(j => !j.docs).forEach(j => flags.push(['red', `${j.name}: no RAMS uploaded.`, `#/jobs/${j.id}`]));
     if (c.unmatched) flags.push(['', `${c.unmatched} signature${c.unmatched === 1 ? '' : 's'} from people not on the register.`, '#/unmatched']);
     d.noDiary.forEach(j => flags.unshift(['', `${j.name}: no site diary for ${fDate(j.day)}.`, `#/jobs/${j.id}`]));
+    if (d.money) {
+      d.money.rows.filter(j => j.status === 'live' && j.rag === 'amber').forEach(j => flags.unshift(['', `${j.name}: ${j.hours_pct > 90 ? `${Math.round(j.hours_pct)}% of labour hours used` : j.materials_pct > 95 ? 'materials at the allowance' : 'margin under 10%'}.`, `#/costs/${j.id}`]));
+      d.money.rows.filter(j => j.status === 'live' && j.rag === 'red').forEach(j => {
+        const why = [j.margin < 0 && `losing money, ${gbp(-j.margin)} over value so far`, j.hours_pct > 110 && `${Math.round(j.hours_pct)}% of labour hours used`, j.materials_pct > 115 && `materials ${Math.round(j.materials_pct)}% of allowance`].filter(Boolean);
+        flags.unshift(['red', `${j.name}: ${why.join(', ')}${j.margin >= 0 ? ` (margin down to ${pc(j.margin_pct)})` : ''}.`, `#/costs/${j.id}`]);
+      });
+    }
     if (!c.operatives) flags.push(['red', 'No {ops} on the register yet. Start here.', '#/operatives']);
     if (!c.live_jobs) flags.push(['red', 'No live jobs yet. Add a job and send its diary link to the supervisor.', '#/jobs']);
 
@@ -218,6 +234,7 @@
         <a class="stat accent" href="#/operatives"><div class="n">${c.operatives}</div><div class="l">{Ops}</div></a>
         <a class="stat ${expired.length + d.missing.length ? 'bad' : ''}" href="#/matrix"><div class="n">${expired.length + d.missing.length}</div><div class="l">Training gaps</div></a>
         <a class="stat" href="#/jobs"><div class="n">${c.live_jobs}</div><div class="l">Live jobs</div></a>
+        ${d.money ? `<a class="stat ${d.money.margin < 0 ? 'bad' : ''}" href="#/costs"><div class="n">${gbp(d.money.margin)}</div><div class="l">Margin on live jobs${d.money.value ? ` (${pc((d.money.margin / d.money.value) * 100)})` : ''}</div></a>` : ''}
         <a class="stat ${c.diaries_today ? 'accent' : ''}" href="#/diaries"><div class="n">${c.diaries_today}<span class="small muted" style="font-size:.85rem;font-weight:600"> today</span></div><div class="l">Site diaries (${c.diaries_7d} this week)</div></a></div>
       <h2>Needs attention</h2>
       <div class="flags">${flags.length ? flags.map(([k, t, h]) => `<a class="flag ${k}" href="${h}" style="text-decoration:none;color:inherit"><span>${esc(t)}</span><span class="btn small ghost">View</span></a>`).join('')
@@ -278,15 +295,16 @@
     openDlg(isNew ? 'Add {op}' : `Edit ${o.full_name}`, `
       <div class="row">${field('Full name', input('fn', o.full_name))}${field('Mobile', input('ph', o.phone, 'tel'), 'used to match their signatures')}</div>
       <div class="row">${field('Role or trade', input('ro', o.role, 'text', 'list="roles"'))}${field('Employment', `<select id="em"><option value="">Not set</option>${['Employed', 'Subcontract', 'Agency'].map(x => `<option ${o.employment === x ? 'selected' : ''}>${x}</option>`).join('')}</select>`)}</div>
-      <datalist id="roles">${['Installer', 'Fitter', 'Supervisor', 'Labourer', 'Apprentice', 'Plumber', 'Heating engineer', 'Gas engineer', 'Driver'].map(x => `<option>${x}</option>`).join('')}</datalist>
+      <datalist id="roles">${['Ganger', 'Pipelayer', 'Operative', '360 Operator', 'Supervisor', 'Apprentice', 'Driver', 'Gas engineer'].map(x => `<option>${x}</option>`).join('')}</datalist>
       <div class="row">${field('Email', input('ea', o.email, 'email'))}${field('Start date', input('sd', o.start_date, 'date'))}</div>
       <div class="row">${field('Emergency contact', input('en', o.emergency_name))}${field('Emergency number', input('ep', o.emergency_phone, 'tel'))}</div>
+      ${field('Loaded cost rate (£ per hour)', input('cr', o.cost_rate, 'number', 'step="0.01" min="0"'), 'wage plus on-costs; used to price their diary hours onto jobs')}
       ${field('Notes', `<textarea id="no">${esc(o.notes || '')}</textarea>`)}
       ${isNew ? '' : `<label class="check"><input type="checkbox" id="ac" ${o.active ? 'checked' : ''}> Currently working for us <span class="hint">untick when they leave; their records are kept</span></label>`}`,
     `<button class="btn" id="save">${isNew ? 'Add {op}' : 'Save'}</button>`);
     $d('#save').onclick = async () => {
       const body = { full_name: val('#fn'), phone: val('#ph'), role: val('#ro'), employment: val('#em'), email: val('#ea'), start_date: val('#sd'),
-        emergency_name: val('#en'), emergency_phone: val('#ep'), notes: val('#no'), active: isNew ? true : $d('#ac').checked };
+        emergency_name: val('#en'), emergency_phone: val('#ep'), notes: val('#no'), cost_rate: val('#cr'), active: isNew ? true : $d('#ac').checked };
       try {
         if (isNew) { const r = await api('/operatives', { body }); dlg.close(); bust(); location.hash = '#/operatives/' + r.row.id; }
         else { await api('/operatives/' + o.id, { method: 'PUT', body }); dlg.close(); bust(); route(); }
@@ -421,11 +439,17 @@
       ${field('Site address', input('ad', j.address))}
       <div class="row">${field('Main contractor or client', input('cl', j.client))}${field('Their site contact', input('cc', j.client_contact))}</div>
       <div class="row">${field('Start', input('st', j.start_on, 'date'))}${field('Finish', input('en', j.end_on, 'date'))}</div>
+      <div class="dlg-sub">Money <span class="hint">what the job is worth and what was allowed for it; the cost side builds itself from the diaries and the cost ledger</span></div>
+      <div class="row">${field('Job type', `<select id="jt">${[['measured', 'Measured (schedule of rates)'], ['fixed', 'Fixed price'], ['daywork', 'Daywork']].map(([k, l]) => `<option value="${k}" ${(j.job_type || 'measured') === k ? 'selected' : ''}>${l}</option>`).join('')}</select>`)}
+        ${field('Order value (£, net)', input('ov', j.order_value, 'number', 'step="0.01" min="0"'), 'expected value of the order or the price agreed')}</div>
+      <div class="row">${field('Labour hours allowed', input('bh', j.budget_hours, 'number', 'step="0.5" min="0"'))}${field('Materials allowed (£)', input('bm', j.budget_materials, 'number', 'step="1" min="0"'))}</div>
+      <div class="row">${field('Plant, subcontract and other allowed (£)', input('bo', j.budget_other, 'number', 'step="1" min="0"'))}${field('Retention %', input('rp', j.retention_pct, 'number', 'step="0.5" min="0" max="20"'), 'held by the client until defects; cash, not margin')}</div>
       ${field('Notes', `<textarea id="no">${esc(j.notes || '')}</textarea>`)}
       ${isNew ? '' : field('Status', `<select id="ss"><option value="live">Live</option><option value="complete" ${j.status === 'complete' ? 'selected' : ''}>Complete (pack link stops working)</option></select>`)}`,
     `<button class="btn" id="save">${isNew ? 'Add job' : 'Save'}</button>`);
     $d('#save').onclick = async () => {
-      const body = { name: val('#nm'), ref: val('#rf'), address: val('#ad'), client: val('#cl'), client_contact: val('#cc'), start_on: val('#st'), end_on: val('#en'), notes: val('#no'), status: isNew ? 'live' : val('#ss') };
+      const body = { name: val('#nm'), ref: val('#rf'), address: val('#ad'), client: val('#cl'), client_contact: val('#cc'), start_on: val('#st'), end_on: val('#en'), notes: val('#no'), status: isNew ? 'live' : val('#ss'),
+        job_type: val('#jt'), order_value: val('#ov'), budget_hours: val('#bh'), budget_materials: val('#bm'), budget_other: val('#bo'), retention_pct: val('#rp') };
       try {
         if (isNew) { const r = await api('/jobs', { body }); dlg.close(); bust(); location.hash = '#/jobs/' + r.row.id; }
         else { await api('/jobs/' + j.id, { method: 'PUT', body }); dlg.close(); bust(); route(); }
@@ -442,6 +466,7 @@
     const others = d.signoffs.filter(s => cur.some(x => x.id === s.document_id) && (!s.operative_id || !d.team.some(t => t.id === s.operative_id)));
     const rams = await api(`/rams/jobs/${j.id}`);
     const liveRams = rams.rows.find(x => x.status === 'issued');
+    const money = canEdit() ? await api('/costs/jobs/' + j.id).catch(() => null) : null;
     setMain(`<p class="no-print"><a href="#/jobs">Back to jobs</a></p>
       <div class="ad-head"><div><h1>${esc(j.name)}</h1><p class="muted">${[j.ref, j.client, j.address].filter(Boolean).map(esc).join(' · ')}${j.status === 'complete' ? ' · <span class="pill grey">complete</span>' : ''}</p></div>
         ${canEdit() ? `<div class="no-print" style="display:flex;gap:.5rem;flex-wrap:wrap"><button class="btn ghost" id="ed">Edit job</button><button class="btn ghost" id="tm">Choose team</button><button class="btn ghost" id="up">Upload document</button>${rams.defaults ? `<button class="btn" id="nr">${liveRams ? 'Revise RAMS' : 'New RAMS'}</button>` : ''}</div>` : ''}</div>
@@ -450,6 +475,7 @@
           <p class="small muted">Site briefing confirmed by ${liveRams.briefed} ${liveRams.briefed === 1 ? 'person' : 'people'}. The lads confirm it from the job pack link when they start on site, and that puts them on the team.</p>
           ${rams.rows.length > 1 ? `<details><summary class="small muted">Earlier issues (${rams.rows.length - 1})</summary><ul class="small">${rams.rows.filter(x => x.status !== 'issued').map(x => `<li>Issue ${x.issue_no}, ${fDate(x.issue_date)}, master v${x.master_version} <a href="/api/admin/documents/${x.document_id}/file" target="_blank" rel="noopener">PDF</a></li>`).join('')}</ul></details>` : ''}`
         : `<p class="muted">No RAMS issued for this job from the portal yet.${canEdit() ? ' Use New RAMS: the site details are filled in from the job, you add anything site-specific, and the PDF is made from the company RAMS master.' : ''}</p>`}</div>` : ''}
+      ${money ? moneyStrip(money.job, true) : ''}
       ${j.status === 'live' ? `<div class="panel no-print diary-panel"><div class="ad-head" style="margin-bottom:.4rem"><div><h2 style="margin:0">Daily site diary</h2><p class="small muted" style="margin:0">Send this link to whoever runs the site. They open it at the end of each day, fill in the diary, sign and send. It stays on their phone; one link for the whole job.</p></div>
           <div><a class="btn small ghost" href="#/diaries?job=${j.id}">All diaries (${d.diary_count})</a>${d.diary_count ? `<a class="btn small ghost" href="/api/admin/diary/export.pdf?job=${j.id}">Export PDF</a>` : ''}${canEdit() ? `<button class="btn small" id="nd">Add a diary from the office</button>` : ''}</div></div>
         ${shareBox(j.diary_url, `/api/admin/jobs/${j.id}/diary-qr.svg`, `${j.name}: daily site diary link. Open it at the end of each day, fill it in and send it.`)}
@@ -657,6 +683,169 @@
       img.onerror = () => { URL.revokeObjectURL(url); resolve(null); };
       img.src = url;
     });
+  }
+
+
+  // ---------- job costing ----------
+  const gbp = (n, dp = 0) => (n == null || isNaN(n) ? '' : (n < 0 ? '-£' : '£') + Math.abs(n).toLocaleString('en-GB', { minimumFractionDigits: dp, maximumFractionDigits: dp }));
+  const pc = n => (n == null || isNaN(n) ? '' : `${Math.round(n)}%`);
+  const hrs = n => (n == null ? '' : (Math.round(n * 10) / 10).toLocaleString('en-GB'));
+  const ragPill = (r, x) => ({ red: `<span class="pill no">${x && x.margin < 0 ? 'Losing money' : 'Over budget'}</span>`, amber: '<span class="pill under_review">Watch</span>', green: '<span class="pill yes">On track</span>', grey: '<span class="pill grey">No value set</span>' }[r] || '');
+  const bar = (used, total, cls) => { if (!total) return '<span class="small muted">no allowance set</span>'; const p = Math.min(100, (used / total) * 100); return `<div class="bar ${cls || (used > total ? 'bad' : p > 90 ? 'warn' : '')}"><i style="width:${p}%"></i></div>`; };
+  function moneyStrip(x, withLink) {
+    return `<div class="money-strip ${x.rag}">
+      <div><span class="k">Value</span><b>${gbp(x.value)}</b><span class="s">${x.variations ? `${gbp(x.order_value)} + ${gbp(x.variations)} variations` : x.order_value ? 'order value' : 'not set'}</span></div>
+      <div><span class="k">Cost to date</span><b>${gbp(x.cost)}</b><span class="s">${gbp(x.labour)} labour · ${gbp(x.materials + x.other)} other</span></div>
+      <div><span class="k">Margin</span><b class="${x.margin < 0 ? 'neg' : ''}">${x.value ? gbp(x.margin) : '–'}</b><span class="s">${x.margin_pct == null ? '' : `${pc(x.margin_pct)} of value`}</span></div>
+      <div><span class="k">Hours</span><b>${hrs(x.hours)}</b><span class="s">${x.budget_hours ? `of ${hrs(x.budget_hours)} allowed (${pc(x.hours_pct)})` : `${x.days} diary days`}</span>${bar(x.hours, x.budget_hours)}</div>
+      <div><span class="k">Materials</span><b>${gbp(x.materials)}</b><span class="s">${x.budget_materials ? `of ${gbp(x.budget_materials)} allowed` : ''}</span>${bar(x.materials, x.budget_materials)}</div>
+      ${withLink ? `<div class="act">${ragPill(x.rag, x)}<a class="btn small ghost" href="#/costs/${x.id}">Full breakdown</a></div>` : `<div class="act">${ragPill(x.rag, x)}</div>`}</div>`;
+  }
+
+  async function costsView(params, id) {
+    if (id) return costJob(id);
+    const d = await api('/costs/summary');
+    const live = d.rows.filter(j => j.status === 'live'), done = d.rows.filter(j => j.status !== 'live');
+    const tot = rows => rows.reduce((a, j) => ({ value: a.value + j.value, cost: a.cost + j.cost, labour: a.labour + j.labour, hours: a.hours + j.hours }), { value: 0, cost: 0, labour: 0, hours: 0 });
+    const t = tot(live);
+    const table = rows => `<div class="tablewrap"><table class="costs"><thead><tr><th>Job</th><th>Type</th><th class="r">Value</th><th class="r">Labour</th><th class="r">Other</th><th class="r">Cost</th><th class="r">Margin</th><th>Hours</th><th>Materials</th><th></th></tr></thead><tbody>
+      ${rows.map(j => `<tr class="click" data-href="#/costs/${j.id}"><td class="jobcell"><b>${esc(j.name)}</b><div class="small muted">${esc(j.ref || '')}${j.client ? ` · ${esc(j.client)}` : ''}</div></td><td class="small">${esc(d.job_types[j.job_type] || '').split(' (')[0]}</td>
+        <td class="r">${gbp(j.value)}</td><td class="r">${gbp(j.labour)}</td><td class="r">${gbp(j.materials + j.other)}</td><td class="r"><b>${gbp(j.cost)}</b></td>
+        <td class="r ${j.margin < 0 ? 'neg' : ''}"><b>${j.value ? gbp(j.margin) : '–'}</b>${j.margin_pct == null ? '' : `<div class="small muted">${pc(j.margin_pct)}</div>`}</td>
+        <td style="min-width:120px">${hrs(j.hours)}${j.budget_hours ? ` <span class="small muted">/ ${hrs(j.budget_hours)}</span>` : ''}${bar(j.hours, j.budget_hours)}</td>
+        <td style="min-width:120px">${gbp(j.materials)}${j.budget_materials ? ` <span class="small muted">/ ${gbp(j.budget_materials)}</span>` : ''}${bar(j.materials, j.budget_materials)}</td><td>${ragPill(j.rag, j)}</td></tr>`).join('')}</tbody></table></div>`;
+    setMain(`<div class="ad-head"><div><p class="muted">Every job's value against what it has cost so far. Labour comes straight off the site diaries at each person's loaded rate (default ${gbp(d.rate)}/hr${isAdmin() ? ', <a href="#" id="rate">change</a>' : ''}); materials, plant and subcontract come from the cost ledger on each job.</p></div></div>
+      <div class="stats"><div class="stat"><div class="n">${gbp(t.value)}</div><div class="l">Value of live jobs</div></div><div class="stat"><div class="n">${gbp(t.cost)}</div><div class="l">Cost to date</div></div>
+        <div class="stat ${t.value - t.cost < 0 ? 'bad' : ''}"><div class="n">${gbp(t.value - t.cost)}</div><div class="l">Margin to date${t.value ? ` (${pc(((t.value - t.cost) / t.value) * 100)})` : ''}</div></div>
+        <div class="stat ${live.some(j => j.rag === 'red') ? 'bad' : ''}"><div class="n">${live.filter(j => j.rag === 'red').length}</div><div class="l">Jobs losing money</div></div></div>
+      <h2>Live jobs</h2>${live.length ? table(live) : '<div class="empty"><b>No live jobs.</b></div>'}
+      ${done.length ? `<h2>Completed jobs</h2>${table(done)}` : ''}`);
+    main().querySelectorAll('[data-href]').forEach(tr => (tr.onclick = () => (location.hash = tr.dataset.href)));
+    if (document.getElementById('rate')) document.getElementById('rate').onclick = e => {
+      e.preventDefault();
+      openDlg('Default cost rate', field('£ per hour', input('dr', d.rate, 'number', 'step="0.01" min="0"'), 'used for anyone without their own rate, and for names typed into a diary that are not on the register'), '<button class="btn" id="save">Save</button>');
+      $d('#save').onclick = async () => { try { await api('/costs/settings', { method: 'PUT', body: { default_cost_rate: val('#dr') } }); dlg.close(); route(); } catch (err) { dlgErr(err.message); } };
+    };
+  }
+
+  async function costJob(id) {
+    const d = await api('/costs/jobs/' + id);
+    const x = d.job, C = d.categories;
+    const costItems = d.items.filter(i => i.kind === 'cost'), valueItems = d.items.filter(i => i.kind === 'value');
+    const maxWeek = Math.max(1, ...d.weeks.map(w => w.cost));
+    setMain(`<p class="no-print"><a href="#/costs">Back to job costs</a> · <a href="#/jobs/${x.id}">Job page</a></p>
+      <div class="ad-head"><div><h1>${esc(x.name)}</h1><p class="muted">${esc(x.ref || '')}${x.client ? ` · ${esc(x.client)}` : ''} · ${esc(d.job_types[x.job_type] || '')}${x.status === 'complete' ? ' · <span class="pill grey">complete</span>' : ''}</p></div>
+        <div class="no-print"><a class="btn ghost" href="/api/admin/costs/jobs/${x.id}/export.csv">Spreadsheet</a><a class="btn ghost" href="/api/admin/costs/jobs/${x.id}.pdf" target="_blank" rel="noopener">Cost report PDF</a><button class="btn ghost" id="edm">Edit value and allowances</button><button class="btn" id="addc">Add cost</button><button class="btn ghost" id="addv">Add variation</button></div></div>
+      ${moneyStrip(x)}
+      ${!x.order_value ? '<div class="note warn">No order value on this job yet, so there is nothing to measure cost against. Use "Edit value and allowances".</div>' : ''}
+      <div class="two-col">
+        <div class="panel"><h2>Where the money has gone</h2><table><tbody>
+          <tr><td>Labour <span class="small muted">${hrs(x.hours)} hrs from ${x.days} diary days</span></td><td class="r"><b>${gbp(x.labour)}</b></td><td class="r small muted">${x.cost ? pc((x.labour / x.cost) * 100) : ''}</td></tr>
+          ${Object.entries(C).filter(([k]) => d.byCategory[k]).map(([k, l]) => `<tr><td>${l}</td><td class="r"><b>${gbp(d.byCategory[k])}</b></td><td class="r small muted">${pc((d.byCategory[k] / x.cost) * 100)}</td></tr>`).join('')}
+          <tr class="total"><td>Total cost to date</td><td class="r"><b>${gbp(x.cost)}</b></td><td></td></tr>
+          ${x.retention_pct && x.value ? `<tr><td class="small muted">Retention held by client at ${x.retention_pct}%</td><td class="r small muted">${gbp(x.value * x.retention_pct / 100)}</td><td></td></tr>` : ''}</tbody></table></div>
+        <div class="panel"><h2>Week by week</h2>${d.weeks.length ? `<table class="weeks"><thead><tr><th>Week</th><th class="r">Hours</th><th class="r">Labour</th><th class="r">Other</th><th class="r">Total</th><th style="width:30%"></th></tr></thead><tbody>
+          ${d.weeks.map(w => `<tr><td>${fDate(w.week)}</td><td class="r">${hrs(w.hours)}</td><td class="r">${gbp(w.labour)}</td><td class="r">${gbp(w.other)}</td><td class="r"><b>${gbp(w.cost)}</b></td><td><div class="bar flat"><i style="width:${(w.cost / maxWeek) * 100}%"></i></div></td></tr>`).join('')}</tbody></table>` : '<p class="small muted">Nothing recorded yet.</p>'}</div>
+      </div>
+      <div class="panel"><h2>Labour by person</h2>${d.people.length ? `<table><thead><tr><th>Name</th><th>Role</th><th class="r">Days</th><th class="r">Hours</th><th class="r">Rate</th><th class="r">Cost</th></tr></thead><tbody>
+        ${d.people.map(p => `<tr><td>${p.operative_id ? `<a href="#/operatives/${p.operative_id}">${esc(p.name)}</a>` : `${esc(p.name)} <span class="small muted">not on register</span>`}</td><td>${esc(p.role || '')}</td><td class="r">${p.days}</td><td class="r">${hrs(p.hours)}</td><td class="r">${gbp(p.rate, 2)}</td><td class="r"><b>${gbp(p.cost)}</b></td></tr>`).join('')}
+        <tr class="total"><td>Total</td><td></td><td></td><td class="r">${hrs(x.hours)}</td><td></td><td class="r"><b>${gbp(x.labour)}</b></td></tr></tbody></table>
+        <p class="small muted" style="margin:.5rem 0 0">Hours come from the site diaries. Rates are loaded cost rates set on each person; anyone without one is costed at ${gbp(d.rate)}/hr.</p>` : '<p class="small muted">No diary hours on this job yet.</p>'}</div>
+      ${valueItems.length ? `<div class="panel"><h2>Variations and additional value</h2><table class="ledger"><thead><tr><th>Date</th><th>Description</th><th>Reference</th><th class="r">Amount</th><th></th></tr></thead><tbody>
+        ${valueItems.map(i => `<tr><td>${fDate(i.cost_date)}</td><td>${esc(i.description)}</td><td>${esc(i.reference || '')}</td><td class="r"><b>${gbp(i.amount)}</b></td><td class="r"><button class="btn small quiet" data-ed="${i.id}">Edit</button></td></tr>`).join('')}
+        <tr class="total"><td></td><td>Total variations</td><td></td><td class="r"><b>${gbp(x.variations)}</b></td><td></td></tr></tbody></table></div>` : ''}
+      <div class="panel"><div class="ad-head" style="margin-bottom:.5rem"><h2 style="margin:0">Cost ledger</h2></div>
+        ${costItems.length ? `<table class="ledger"><thead><tr><th>Date</th><th>Category</th><th>Description</th><th>Supplier</th><th>Ref</th><th class="r">Amount</th><th></th></tr></thead><tbody>
+        ${costItems.map(i => `<tr><td>${fDate(i.cost_date)}</td><td class="small">${esc(C[i.category] || i.category)}</td><td>${esc(i.description)}${i.qty != null && i.unit ? ` <span class="small muted">${i.qty} ${esc(i.unit)}${i.unit_cost != null ? ` at ${gbp(i.unit_cost, 2)}` : ''}</span>` : ''}${i.has_file ? ` <a class="small" href="/api/admin/costs/items/${i.id}/file" target="_blank" rel="noopener">${/pdf/i.test(i.file_name || '') ? 'invoice' : 'photo'}</a>` : ''}</td>
+          <td class="small">${esc(i.supplier || '')}</td><td class="small muted">${esc(i.reference || '')}</td><td class="r"><b>${gbp(i.amount, 2)}</b></td><td class="r"><button class="btn small quiet" data-ed="${i.id}">Edit</button></td></tr>`).join('')}</tbody></table>`
+        : '<div class="empty"><b>Nothing in the ledger yet.</b>Add materials, plant hire, subcontract and traffic management as the invoices or delivery notes come in.</div>'}</div>`);
+    document.getElementById('addc').onclick = () => costItemDialog(x.id, { kind: 'cost' });
+    document.getElementById('addv').onclick = () => costItemDialog(x.id, { kind: 'value' });
+    document.getElementById('edm').onclick = async () => { const jd = await api('/jobs/' + x.id); editJob(jd.job); };
+    main().querySelectorAll('[data-ed]').forEach(b => (b.onclick = () => costItemDialog(x.id, d.items.find(i => String(i.id) === b.dataset.ed))));
+  }
+
+  async function costItemDialog(jobId, it) {
+    const isNew = !it.id, isValue = it.kind === 'value';
+    const mats = isValue ? [] : (await api('/costs/materials')).rows.filter(m => m.active);
+    const C = { materials: 'Materials', plant: 'Plant and hire', subcontract: 'Subcontract', tm: 'Traffic management', other: 'Other' };
+    let file = null;
+    openDlg(isValue ? (isNew ? 'Add variation or additional value' : 'Edit variation') : (isNew ? 'Add cost' : 'Edit cost'), `
+      <div class="row">${field('Date', input('dt', it.cost_date || new Date().toLocaleDateString('en-CA', tz), 'date'))}
+        ${isValue ? field('Reference', input('rf', it.reference), 'VO number, email date, who agreed it') : field('Category', `<select id="ct">${Object.entries(C).map(([k, l]) => `<option value="${k}" ${(it.category || 'materials') === k ? 'selected' : ''}>${l}</option>`).join('')}</select>`)}</div>
+      ${!isValue && mats.length ? field('From the price list', `<select id="mt"><option value="">Type it in below</option>${mats.map(m => `<option value="${m.id}" ${it.material_id === m.id ? 'selected' : ''}>${esc(m.name)}${m.unit_cost != null ? ` (${gbp(m.unit_cost, 2)}/${esc(m.unit || 'each')})` : ''}</option>`).join('')}</select>`, 'picking one fills in the description, unit and unit cost') : ''}
+      ${field(isValue ? 'What was agreed' : 'Description', input('ds', it.description))}
+      ${isValue ? '' : `<div class="row">${field('Supplier', input('sp', it.supplier))}${field('Invoice or delivery note ref', input('rf', it.reference))}</div>
+      <div class="row three">${field('Quantity', input('qt', it.qty, 'number', 'step="0.01" min="0"'))}${field('Unit', input('un', it.unit))}${field('Unit cost (£)', input('uc', it.unit_cost, 'number', 'step="0.01" min="0"'))}</div>`}
+      ${field(isValue ? 'Amount agreed (£, net)' : 'Amount (£, net of VAT)', input('am', it.amount, 'number', 'step="0.01"'), isValue ? '' : 'filled in from quantity × unit cost if you leave it empty')}
+      ${isNew && !isValue ? field('Invoice or delivery note', '<input type="file" id="pf" accept="image/*,application/pdf">', 'optional: a photo or PDF kept with the entry') : ''}`,
+      `${isNew ? '' : '<button class="btn ghost danger-text" id="del">Delete</button>'}<button class="btn" id="save">${isNew ? 'Add' : 'Save'}</button>`);
+    if ($d('#mt')) $d('#mt').onchange = () => { const m = mats.find(mm => String(mm.id) === val('#mt')); if (!m) return; $d('#ds').value = m.name; $d('#un').value = m.unit || ''; if (m.unit_cost != null) $d('#uc').value = m.unit_cost; if (m.supplier && !$d('#sp').value) $d('#sp').value = m.supplier; recalc(); };
+    const recalc = () => { const qv = Number(val('#qt')), uv = Number(val('#uc')); if (qv && uv) $d('#am').value = (Math.round(qv * uv * 100) / 100).toFixed(2); };
+    if ($d('#qt')) { $d('#qt').oninput = recalc; $d('#uc').oninput = recalc; }
+    if ($d('#pf')) $d('#pf').onchange = async e => {
+      const f = e.target.files[0]; if (!f) { file = null; return; }
+      if (f.type === 'application/pdf') { if (f.size > 4_000_000) return dlgErr('That PDF is over 4MB.'); file = { name: f.name, data: await new Promise(res => { const r = new FileReader(); r.onload = () => res(r.result); r.readAsDataURL(f); }) }; }
+      else { const data = await shrinkImage(f); file = data ? { name: f.name.replace(/\.\w+$/, '') + '.jpg', data } : null; }
+    };
+    $d('#save').onclick = async () => {
+      const body = { kind: it.kind, category: isValue ? 'variation' : val('#ct'), cost_date: val('#dt'), description: val('#ds'), supplier: val('#sp'), reference: val('#rf'), material_id: val('#mt'), qty: val('#qt'), unit: val('#un'), unit_cost: val('#uc'), amount: val('#am'), file };
+      try { if (isNew) await api(`/costs/jobs/${jobId}/items`, { body }); else await api('/costs/items/' + it.id, { method: 'PUT', body }); dlg.close(); route(); } catch (e) { dlgErr(e.message); }
+    };
+    if ($d('#del')) $d('#del').onclick = async () => { if (!confirm('Delete this entry?')) return; try { await api('/costs/items/' + it.id, { method: 'DELETE' }); dlg.close(); route(); } catch (e) { dlgErr(e.message); } };
+  }
+
+  // ---------- hours (timesheet from the diaries) ----------
+  async function hoursView(params) {
+    const monday = d => { const x = new Date(d + 'T12:00:00Z'); x.setUTCDate(x.getUTCDate() - ((x.getUTCDay() + 6) % 7)); return x.toISOString().slice(0, 10); };
+    const shift = (d, n) => { const x = new Date(d + 'T12:00:00Z'); x.setUTCDate(x.getUTCDate() + n); return x.toISOString().slice(0, 10); };
+    const from = params.get('from') || monday(new Date().toLocaleDateString('en-CA', tz));
+    const to = shift(from, 6), job = params.get('job') || '';
+    const qs = `from=${from}&to=${to}${job ? `&job=${job}` : ''}`;
+    const [d, js] = await Promise.all([api('/costs/hours?' + qs), jobs()]);
+    const days = [0, 1, 2, 3, 4, 5, 6].map(i => shift(from, i));
+    const people = new Map();
+    for (const r of d.rows) {
+      const key = r.operative_id || r.name.toLowerCase();
+      if (!people.has(key)) people.set(key, { id: r.operative_id, name: r.name, role: r.role, days: {}, jobs: new Set(), hours: 0, cost: 0 });
+      const p = people.get(key); p.days[r.diary_date] = (p.days[r.diary_date] || 0) + r.hours; p.jobs.add(r.job); p.hours += r.hours; p.cost += r.cost;
+    }
+    const rows = [...people.values()].sort((a, b) => a.name.localeCompare(b.name));
+    const dayTot = days.map(dd => rows.reduce((a, p) => a + (p.days[dd] || 0), 0));
+    const link = f => `#/hours?from=${f}${job ? `&job=${job}` : ''}`;
+    setMain(`<div class="ad-head"><div><p class="muted">Who worked, where and for how long, straight from the site diaries. This replaces the paper timesheet: export the week for payroll.</p></div>
+        <div>${rows.length ? `<a class="btn ghost" href="/api/admin/costs/hours.csv?${qs}">Export week (CSV)</a>` : ''}</div></div>
+      <div class="toolbar"><a class="btn ghost" href="${link(shift(from, -7))}">‹ Previous</a><div class="field"><label>Week starting</label><input type="date" id="wk" value="${from}"></div><a class="btn ghost" href="${link(shift(from, 7))}">Next ›</a>
+        <div class="field"><label>Job</label><select id="jb"><option value="">All jobs</option>${opt(js, job)}</select></div></div>
+      <div class="tablewrap">${rows.length ? `<table class="hours"><thead><tr><th>Name</th>${days.map(dd => `<th class="r ${/6$|0$/.test(new Date(dd + 'T12:00:00Z').getUTCDay()) ? 'we' : ''}">${['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][days.indexOf(dd)]}<div class="small muted">${dd.slice(8)}/${dd.slice(5, 7)}</div></th>`).join('')}<th class="r">Total</th><th class="r">Cost</th><th>Jobs</th></tr></thead><tbody>
+        ${rows.map(p => `<tr><td>${p.id ? `<a href="#/operatives/${p.id}">${esc(p.name)}</a>` : `${esc(p.name)} <span class="small muted">not on register</span>`}<div class="small muted">${esc(p.role || '')}</div></td>
+          ${days.map(dd => `<td class="r">${p.days[dd] ? hrs(p.days[dd]) : '<span class="muted">·</span>'}</td>`).join('')}<td class="r"><b>${hrs(p.hours)}</b>${p.hours > 50 ? ' <span class="pill under_review" title="Over 50 hours">50+</span>' : ''}</td><td class="r">${gbp(p.cost)}</td><td class="small">${[...p.jobs].map(esc).join(', ')}</td></tr>`).join('')}
+        <tr class="total"><td>Total</td>${dayTot.map(n => `<td class="r">${n ? hrs(n) : ''}</td>`).join('')}<td class="r"><b>${hrs(rows.reduce((a, p) => a + p.hours, 0))}</b></td><td class="r">${gbp(rows.reduce((a, p) => a + p.cost, 0))}</td><td></td></tr></tbody></table>`
+        : '<div class="empty"><b>No hours recorded this week.</b>Hours appear here as the supervisors send in their site diaries.</div>'}</div>`);
+    document.getElementById('wk').onchange = e => (location.hash = `#/hours?from=${monday(e.target.value)}${job ? `&job=${job}` : ''}`);
+    document.getElementById('jb').onchange = e => (location.hash = `#/hours?from=${from}${e.target.value ? `&job=${e.target.value}` : ''}`);
+  }
+
+  // ---------- materials price list ----------
+  async function materialsView() {
+    const d = await api('/costs/materials');
+    setMain(`<div class="ad-head"><div><p class="muted">Items you buy regularly, with the price you pay. Picking one when adding a cost fills in the description and unit cost.</p></div>
+        <div><button class="btn ghost" id="imp">Paste a price list</button><button class="btn" id="add">Add item</button></div></div>
+      <div class="tablewrap">${d.rows.length ? `<table><thead><tr><th>Item</th><th>Unit</th><th class="r">Unit cost</th><th>Usual supplier</th><th></th></tr></thead><tbody>
+        ${d.rows.map(m => `<tr><td><b>${esc(m.name)}</b>${m.active ? '' : ' <span class="pill grey">hidden</span>'}</td><td>${esc(m.unit || '')}</td><td class="r">${gbp(m.unit_cost, 2)}</td><td>${esc(m.supplier || '')}</td><td class="r"><button class="btn small quiet" data-m="${m.id}">Edit</button></td></tr>`).join('')}</tbody></table>`
+        : '<div class="empty"><b>No items yet.</b>Add the pipe, fittings, bedding and hire items you use most.</div>'}</div>`);
+    const edit = (m = {}) => {
+      openDlg(m.id ? 'Edit item' : 'Add item', `${field('Item', input('nm', m.name))}<div class="row three">${field('Unit', input('un', m.unit, 'text', 'placeholder="m, each, t, wk"'))}${field('Unit cost (£)', input('uc', m.unit_cost, 'number', 'step="0.01" min="0"'))}${field('Usual supplier', input('sp', m.supplier))}</div>
+        ${m.id ? `<label class="check"><input type="checkbox" id="ac" ${m.active ? 'checked' : ''}> Show in the pick list</label>` : ''}`, '<button class="btn" id="save">Save</button>');
+      $d('#save').onclick = async () => { const body = { name: val('#nm'), unit: val('#un'), unit_cost: val('#uc'), supplier: val('#sp'), active: m.id ? $d('#ac').checked : true };
+        try { await api(m.id ? '/costs/materials/' + m.id : '/costs/materials', { method: m.id ? 'PUT' : 'POST', body }); dlg.close(); route(); } catch (e) { dlgErr(e.message); } };
+    };
+    document.getElementById('add').onclick = () => edit();
+    document.getElementById('imp').onclick = () => {
+      openDlg('Paste a price list', field('One item per line: name, unit, unit cost, supplier', '<textarea id="tx" rows="10" placeholder="180mm PE100 SDR11 pipe, m, 14.60, Radius Systems"></textarea>'), '<button class="btn" id="save">Add items</button>');
+      $d('#save').onclick = async () => { try { const r = await api('/costs/materials/import', { body: { text: val('#tx') } }); dlg.close(); flash(`${r.added} items added.`); route(); } catch (e) { dlgErr(e.message); } };
+    };
+    main().querySelectorAll('[data-m]').forEach(b => (b.onclick = () => edit(d.rows.find(m => String(m.id) === b.dataset.m))));
   }
 
   // ---------- toolbox talks ----------
@@ -901,13 +1090,17 @@
 
   async function settings() {
     if (!isOwner()) return setMain('<div class="note warn">This page is for Safety Simplified.</div>');
-    const [acc, ts] = await Promise.all([api('/account'), types(true)]);
-    setMain(`<div class="panel"><h2>Direct Debit link</h2><p class="small muted">The GoCardless link for this client. Their admins see a "Set up Direct Debit" button on the Users page.</p>
+    const [acc, ts, demo] = await Promise.all([api('/account'), types(true), api('/costs/demo').catch(() => ({ loaded: false }))]);
+    setMain(`<div class="panel"><h2>Demo data</h2><p class="small muted">Loads a register with a training matrix, gangs on live utility jobs, eight weeks of site diaries with hours, a materials price list and a cost ledger, so the whole portal can be shown joined up. Everything it loads is tagged and comes out cleanly.</p>
+        <div>${demo.loaded ? `<span class="pill yes">Loaded (${demo.jobs} demo jobs)</span> <button class="btn small ghost danger-text" id="democlear">Remove demo data</button> <button class="btn small ghost" id="demoload">Reload</button>` : '<button class="btn small" id="demoload">Load demo data</button>'}</div></div>
+      <div class="panel"><h2>Direct Debit link</h2><p class="small muted">The GoCardless link for this client. Their admins see a "Set up Direct Debit" button on the Users page.</p>
         <div class="linkbox"><input id="dd" value="${esc(acc.dd_link)}" placeholder="https://pay.gocardless.com/..."><button class="btn small" id="ddsave">Save link</button></div></div>
       <div class="panel"><div class="ad-head" style="margin-bottom:.6rem"><div><h2 style="margin:0">Training list</h2><p class="small muted" style="margin:0">The columns on the training matrix. Required ones show as missing for anyone without them.</p></div><button class="btn small" id="at">Add training</button></div>
         <div class="tablewrap" style="box-shadow:none"><table><thead><tr><th>Training</th><th>Required for everyone</th><th>Valid for</th><th></th></tr></thead><tbody>
           ${ts.map(t => `<tr><td><b>${esc(t.name)}</b>${t.active ? '' : ' <span class="pill grey">hidden</span>'}</td><td>${t.required ? 'Yes' : ''}</td><td>${t.validity_months ? `${t.validity_months} months` : 'No expiry'}</td>
             <td><button class="btn small quiet" data-t="${t.id}">Edit</button></td></tr>`).join('')}</tbody></table></div></div>`);
+    if (document.getElementById('demoload')) document.getElementById('demoload').onclick = async e => { e.target.disabled = true; e.target.textContent = 'Loading…'; try { const r = await api('/costs/demo', { body: {} }); bust(); flash(`Loaded ${r.people} people, ${r.jobs} jobs, ${r.diaries} diaries.`); route(); } catch (err) { flash(err.message, 'err'); route(); } };
+    if (document.getElementById('democlear')) document.getElementById('democlear').onclick = async () => { if (!confirm('Remove all demo data? Real records are left alone.')) return; try { await api('/costs/demo', { method: 'DELETE' }); bust(); route(); } catch (err) { flash(err.message, 'err'); } };
     document.getElementById('ddsave').onclick = async () => {
       try { await api('/settings', { method: 'PUT', body: { dd_link: v('dd') } }); flash('Link saved.'); } catch (e) { flash(e.message, 'err'); }
     };
