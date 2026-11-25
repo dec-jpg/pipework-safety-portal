@@ -46,6 +46,11 @@ app.use((err, req, res, next) => {
 (async () => {
   await migrate();
   await loadSecret();
+  // DEMO_DATA=1 on the service loads the demo set once (if it is not already in); it can still be removed from the Safety Simplified page.
+  if (process.env.DEMO_DATA === '1') {
+    const { q } = require('./lib/db');
+    if (!(await q("SELECT 1 FROM jobs WHERE ref LIKE 'DEMO-%' LIMIT 1")).rowCount) { const r = await require('./lib/demo').load(); console.log('Demo data loaded:', JSON.stringify(r)); }
+  }
   const port = process.env.PORT || 3000;
   app.listen(port, () => console.log(`Portal listening on ${port}`));
   require('./lib/policies').schedule();
